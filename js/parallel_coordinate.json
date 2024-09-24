@@ -8,7 +8,7 @@
   "data": [
     {
       "name": "data",
-      "url": "data.json",
+      "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/refs/heads/main/data/csvjson.json",
       "format": {
         "type": "json"
       }
