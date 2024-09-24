@@ -29,7 +29,7 @@
           </div>
           <div class="pure-u-24-24">
             <div class="center">
-            <div id="symbol_map_spec"></div>  
+            <div id="choropleth_map_spec"></div>  
           </div>
           </div>
         </div>
@@ -42,17 +42,23 @@
           </div>
           <div class="pure-u-24-24">
             <div class="center">
-              <div id="symbol_map_spec"></div>
+              <div id="parallel_coords_spec"></div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
+    
     <script type="text/javascript">
-      var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/refs/heads/main/js/tree_cover_map.json";
+      var spec1 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/refs/heads/main/js/tree_cover_map.json";
       // var spec = "../js/tree_cover_map.json";
-      vegaEmbed('#symbol_map_spec', spec, { "actions": false }).then(function(result) {}).catch(console.error);
+      vegaEmbed('#choropleth_map_spec', spec1, { "actions": false }).then(function(result) {}).catch(console.error);
+    </script>
+    <script type="text/javascript">
+      var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/refs/heads/main/js/parallel_coordinate.json";
+      // var spec = "../js/tree_cover_map.json";
+      vegaEmbed('#parallel_coords_spec', spec2, { "actions": false }).then(function(result) {}).catch(console.error);
     </script>
   </body>
 </html>
+
