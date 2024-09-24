@@ -1,0 +1,165 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Parallel coordinates plot showing multiple economic indicators over time.",
+    "width": 800,
+    "height": 500,
+    "padding": 5,
+  
+    "data": [
+      {
+        "name": "data",
+        "values": [
+          {
+            "date": "1991-01-01",
+            "leading": 56.6,
+            "coincident": 44.6,
+            "lagging": 40.2,
+            "leading_diffusion": 33.3,
+            "coincident_diffusion": 80.0
+          },
+          {
+            "date": "1991-02-01",
+            "leading": 57.3,
+            "coincident": 45.0,
+            "lagging": 40.5,
+            "leading_diffusion": 50.0,
+            "coincident_diffusion": 80.0
+          }
+        ]
+      },
+      {
+        "name": "fields",
+        "values": [
+          "leading",
+          "coincident",
+          "lagging",
+          "leading_diffusion",
+          "coincident_diffusion"
+        ]
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "ord",
+        "type": "point",
+        "range": "width",
+        "round": true,
+        "domain": {"data": "fields", "field": "data"}
+      },
+      {
+        "name": "leading",
+        "type": "linear",
+        "range": "height",
+        "zero": false,
+        "nice": true,
+        "domain": {"data": "data", "field": "leading"}
+      },
+      {
+        "name": "coincident",
+        "type": "linear",
+        "range": "height",
+        "zero": false,
+        "nice": true,
+        "domain": {"data": "data", "field": "coincident"}
+      },
+      {
+        "name": "lagging",
+        "type": "linear",
+        "range": "height",
+        "zero": false,
+        "nice": true,
+        "domain": {"data": "data", "field": "lagging"}
+      },
+      {
+        "name": "leading_diffusion",
+        "type": "linear",
+        "range": "height",
+        "zero": false,
+        "nice": true,
+        "domain": {"data": "data", "field": "leading_diffusion"}
+      },
+      {
+        "name": "coincident_diffusion",
+        "type": "linear",
+        "range": "height",
+        "zero": false,
+        "nice": true,
+        "domain": {"data": "data", "field": "coincident_diffusion"}
+      }
+    ],
+  
+    "axes": [
+      {
+        "orient": "left",
+        "zindex": 1,
+        "scale": "leading",
+        "title": "Leading",
+        "offset": {"scale": "ord", "field": "leading", "mult": -1}
+      },
+      {
+        "orient": "left",
+        "zindex": 1,
+        "scale": "coincident",
+        "title": "Coincident",
+        "offset": {"scale": "ord", "field": "coincident", "mult": -1}
+      },
+      {
+        "orient": "left",
+        "zindex": 1,
+        "scale": "lagging",
+        "title": "Lagging",
+        "offset": {"scale": "ord", "field": "lagging", "mult": -1}
+      },
+      {
+        "orient": "left",
+        "zindex": 1,
+        "scale": "leading_diffusion",
+        "title": "Leading Diffusion",
+        "offset": {"scale": "ord", "field": "leading_diffusion", "mult": -1}
+      },
+      {
+        "orient": "left",
+        "zindex": 1,
+        "scale": "coincident_diffusion",
+        "title": "Coincident Diffusion",
+        "offset": {"scale": "ord", "field": "coincident_diffusion", "mult": -1}
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "group",
+        "from": {"data": "data"},
+        "marks": [
+          {
+            "type": "line",
+            "from": {"data": "fields"},
+            "encode": {
+              "enter": {
+                "x": {"scale": "ord", "field": "data"},
+                "y": {
+                  "scale": {"signal": "datum"},
+                  "field": {"parent": {"datum": "data"}}
+                },
+                "stroke": {"value": "steelblue"},
+                "strokeWidth": {"value": 1},
+                "strokeOpacity": {"value": 0.3}
+              }
+            }
+          }
+        ]
+      }
+    ],
+  
+    "config": {
+      "axisY": {
+        "titleX": -2,
+        "titleY": 410,
+        "titleAngle": 0,
+        "titleAlign": "right",
+        "titleBaseline": "top"
+      }
+    }
+  }
+  
