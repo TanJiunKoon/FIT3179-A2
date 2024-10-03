@@ -1,16 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Parallel coordinates plot showing multiple economic indicators over time.",
-  "width": 900,
-  "height": 600,
+  "description": "Parallel coordinates plot showing dimensions from your dataset.",
+  "width": 700,
+  "height": 400,
   "padding": 5,
+
+  "config": {
+    "axisY": {
+      "titleX": -2,
+      "titleY": 410,
+      "titleAngle": 0,
+      "titleAlign": "right",
+      "titleBaseline": "top"
+    }
+  },
 
   "data": [
     {
       "name": "data",
       "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/refs/heads/main/data/csvjson.json",
       "format": {
-        "type": "json"
+        "type": "json",
+        "parse": {"date": "date:%Y-%m-%d"}
       }
     },
     {
@@ -27,131 +38,87 @@
 
   "scales": [
     {
-      "name": "xscale",
-      "type": "point",
-      "range": "width",
-      "domain": { "data": "fields", "field": "data" }
+      "name": "ord", "type": "point",
+      "range": "width", "round": true,
+      "domain": {"data": "fields", "field": "data"}
     },
     {
-      "name": "leading",
-      "type": "linear",
-      "range": "height",
-      "nice": true,
-      "zero": false,
-      "domain": { "data": "data", "field": "leading" }
+      "name": "leading", "type": "linear",
+      "range": "height", "zero": false, "nice": true,
+      "domain": {"data": "data", "field": "leading"}
     },
     {
-      "name": "coincident",
-      "type": "linear",
-      "range": "height",
-      "nice": true,
-      "zero": false,
-      "domain": { "data": "data", "field": "coincident" }
+      "name": "coincident", "type": "linear",
+      "range": "height", "zero": false, "nice": true,
+      "domain": {"data": "data", "field": "coincident"}
     },
     {
-      "name": "lagging",
-      "type": "linear",
-      "range": "height",
-      "nice": true,
-      "zero": false,
-      "domain": { "data": "data", "field": "lagging" }
+      "name": "lagging", "type": "linear",
+      "range": "height", "zero": false, "nice": true,
+      "domain": {"data": "data", "field": "lagging"}
     },
     {
-      "name": "leading_diffusion",
-      "type": "linear",
-      "range": "height",
-      "nice": true,
-      "zero": false,
-      "domain": { "data": "data", "field": "leading_diffusion" }
+      "name": "leading_diffusion", "type": "linear",
+      "range": "height", "zero": false, "nice": true,
+      "domain": {"data": "data", "field": "leading_diffusion"}
     },
     {
-      "name": "coincident_diffusion",
-      "type": "linear",
-      "range": "height",
-      "nice": true,
-      "zero": false,
-      "domain": { "data": "data", "field": "coincident_diffusion" }
+      "name": "coincident_diffusion", "type": "linear",
+      "range": "height", "zero": false, "nice": true,
+      "domain": {"data": "data", "field": "coincident_diffusion"}
     }
   ],
 
   "axes": [
     {
-      "orient": "left",
-      "scale": "leading",
-      "title": "Leading",
-      "ticks": false,
-      "labels": false
+      "orient": "left", "zindex": 1,
+      "scale": "leading", "title": "Leading",
+      "offset": {"scale": "ord", "value": "leading", "mult": -1}
     },
     {
-      "orient": "left",
-      "scale": "coincident",
-      "title": "Coincident",
-      "ticks": false,
-      "labels": false
+      "orient": "left", "zindex": 1,
+      "scale": "coincident", "title": "Coincident",
+      "offset": {"scale": "ord", "value": "coincident", "mult": -1}
     },
     {
-      "orient": "left",
-      "scale": "lagging",
-      "title": "Lagging",
-      "ticks": false,
-      "labels": false
+      "orient": "left", "zindex": 1,
+      "scale": "lagging", "title": "Lagging",
+      "offset": {"scale": "ord", "value": "lagging", "mult": -1}
     },
     {
-      "orient": "left",
-      "scale": "leading_diffusion",
-      "title": "Leading Diffusion",
-      "ticks": false,
-      "labels": false
+      "orient": "left", "zindex": 1,
+      "scale": "leading_diffusion", "title": "Leading Diffusion",
+      "offset": {"scale": "ord", "value": "leading_diffusion", "mult": -1}
     },
     {
-      "orient": "left",
-      "scale": "coincident_diffusion",
-      "title": "Coincident Diffusion",
-      "ticks": false,
-      "labels": false
+      "orient": "left", "zindex": 1,
+      "scale": "coincident_diffusion", "title": "Coincident Diffusion",
+      "offset": {"scale": "ord", "value": "coincident_diffusion", "mult": -1}
     }
   ],
 
   "marks": [
     {
       "type": "group",
-      "from": { "data": "data" },
+      "from": {"data": "data"},
       "marks": [
         {
           "type": "line",
-          "from": { "data": "fields" },
+          "from": {"data": "fields"},
           "encode": {
             "enter": {
-              "x": { "scale": "xscale", "field": "data" },
+              "x": {"scale": "ord", "field": "data"},
               "y": {
-                "scale": { "signal": "field" },
-                "field": { "signal": "datum.data" }
+                "scale": {"datum": "data"},
+                "field": {"parent": {"datum": "data"}}
               },
-              "stroke": { "value": "steelblue" },
-              "strokeWidth": { "value": 1 },
-              "strokeOpacity": { "value": 0.3 }
+              "stroke": {"value": "steelblue"},
+              "strokeWidth": {"value": 1.01},
+              "strokeOpacity": {"value": 0.3}
             }
-          },
-          "transform": [
-            {
-              "type": "fold",
-              "fields": ["leading", "coincident", "lagging", "leading_diffusion", "coincident_diffusion"],
-              "as": ["field", "value"]
-            }
-          ]
+          }
         }
       ]
     }
-  ],
-
-  "legends": [],
-
-  "signals": [],
-
-  "config": {
-    "axis": {
-      "titleFontSize": 14,
-      "labelFontSize": 12
-    }
-  }
+  ]
 }
