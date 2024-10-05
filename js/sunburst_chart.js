@@ -49,21 +49,26 @@ function createSunburstChart(csvUrl, chartContainer) {
           .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })
           .attr("fill-opacity", d => arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)
           .attr("d", d => arc(d.current))
+          // Handle click event for zooming
+          .on("click", clicked)
+          // Handle tooltip display on mouseover
           .on("mouseover", function(event, d) {
             const sequence = d.ancestors().map(d => d.data.name).reverse().join(" > ");
             const tooltipText = `<strong>${sequence}</strong><br>GDP value: <strong>${d.value}</strong>`;
-  
+
             d3.select("#tooltip")
               .html(tooltipText)
               .style("visibility", "visible")
               .style("top", (event.pageY + 10) + "px")
               .style("left", (event.pageX + 10) + "px");
           })
+          // Update tooltip position as mouse moves
           .on("mousemove", function(event) {
             d3.select("#tooltip")
               .style("top", (event.pageY + 10) + "px")
               .style("left", (event.pageX + 10) + "px");
           })
+          // Hide the tooltip on mouseout
           .on("mouseout", function() {
             d3.select("#tooltip")
               .style("visibility", "hidden");
