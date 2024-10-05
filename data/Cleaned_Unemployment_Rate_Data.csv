@@ -1,0 +1,589 @@
+state,date,u_rate
+Johor,1982-01-01,3.5
+Johor,1983-01-01,4.2
+Johor,1984-01-01,4.5
+Johor,1985-01-01,5.3
+Johor,1986-01-01,6.8
+Johor,1987-01-01,6.3
+Johor,1988-01-01,5.4
+Johor,1989-01-01,4.6
+Johor,1990-01-01,3.7
+Johor,1992-01-01,2.2
+Johor,1993-01-01,2.9
+Johor,1995-01-01,2.6
+Johor,1996-01-01,2.1
+Johor,1997-01-01,1.7
+Johor,1998-01-01,1.7
+Johor,1999-01-01,3.0
+Johor,2000-01-01,2.2
+Johor,2001-01-01,3.4
+Johor,2002-01-01,2.9
+Johor,2003-01-01,3.5
+Johor,2004-01-01,3.6
+Johor,2005-01-01,3.3
+Johor,2006-01-01,2.1
+Johor,2007-01-01,2.0
+Johor,2008-01-01,2.2
+Johor,2009-01-01,3.2
+Johor,2010-01-01,2.4
+Johor,2011-01-01,2.5
+Johor,2012-01-01,3.1
+Johor,2013-01-01,2.8
+Johor,2014-01-01,2.6
+Johor,2015-01-01,3.1
+Johor,2016-01-01,3.6
+Johor,2017-01-01,3.4
+Johor,2018-01-01,3.0
+Johor,2019-01-01,2.7
+Johor,2020-01-01,3.5
+Johor,2021-01-01,3.8
+Johor,2022-01-01,3.3
+Kedah,1982-01-01,3.7
+Kedah,1983-01-01,3.8
+Kedah,1984-01-01,5.6
+Kedah,1985-01-01,7.1
+Kedah,1986-01-01,8.1
+Kedah,1987-01-01,8.0
+Kedah,1988-01-01,7.4
+Kedah,1989-01-01,5.7
+Kedah,1990-01-01,4.4
+Kedah,1992-01-01,3.7
+Kedah,1993-01-01,3.6
+Kedah,1995-01-01,2.0
+Kedah,1996-01-01,2.5
+Kedah,1997-01-01,2.5
+Kedah,1998-01-01,3.4
+Kedah,1999-01-01,3.2
+Kedah,2000-01-01,2.9
+Kedah,2001-01-01,3.6
+Kedah,2002-01-01,3.2
+Kedah,2003-01-01,3.3
+Kedah,2004-01-01,3.8
+Kedah,2005-01-01,3.7
+Kedah,2006-01-01,3.8
+Kedah,2007-01-01,3.3
+Kedah,2008-01-01,3.8
+Kedah,2009-01-01,4.2
+Kedah,2010-01-01,2.8
+Kedah,2011-01-01,3.5
+Kedah,2012-01-01,2.9
+Kedah,2013-01-01,2.4
+Kedah,2014-01-01,2.7
+Kedah,2015-01-01,2.6
+Kedah,2016-01-01,2.9
+Kedah,2017-01-01,2.8
+Kedah,2018-01-01,2.9
+Kedah,2019-01-01,2.8
+Kedah,2020-01-01,4.2
+Kedah,2021-01-01,3.9
+Kedah,2022-01-01,3.3
+Kelantan,1982-01-01,4.8
+Kelantan,1983-01-01,6.2
+Kelantan,1984-01-01,5.5
+Kelantan,1985-01-01,6.0
+Kelantan,1986-01-01,6.8
+Kelantan,1987-01-01,6.5
+Kelantan,1988-01-01,7.7
+Kelantan,1989-01-01,6.3
+Kelantan,1990-01-01,3.4
+Kelantan,1992-01-01,5.3
+Kelantan,1993-01-01,4.7
+Kelantan,1995-01-01,3.5
+Kelantan,1996-01-01,3.3
+Kelantan,1997-01-01,3.6
+Kelantan,1998-01-01,4.1
+Kelantan,1999-01-01,3.2
+Kelantan,2000-01-01,2.6
+Kelantan,2001-01-01,3.1
+Kelantan,2002-01-01,3.9
+Kelantan,2003-01-01,3.2
+Kelantan,2004-01-01,4.1
+Kelantan,2005-01-01,3.4
+Kelantan,2006-01-01,2.4
+Kelantan,2007-01-01,2.7
+Kelantan,2008-01-01,2.9
+Kelantan,2009-01-01,2.4
+Kelantan,2010-01-01,2.4
+Kelantan,2011-01-01,2.0
+Kelantan,2012-01-01,2.3
+Kelantan,2013-01-01,2.8
+Kelantan,2014-01-01,3.3
+Kelantan,2015-01-01,3.6
+Kelantan,2016-01-01,3.8
+Kelantan,2017-01-01,3.6
+Kelantan,2018-01-01,4.0
+Kelantan,2019-01-01,4.0
+Kelantan,2020-01-01,4.3
+Kelantan,2021-01-01,4.2
+Kelantan,2022-01-01,3.7
+Melaka,1982-01-01,4.0
+Melaka,1983-01-01,2.8
+Melaka,1984-01-01,5.4
+Melaka,1985-01-01,5.5
+Melaka,1986-01-01,9.5
+Melaka,1987-01-01,8.0
+Melaka,1988-01-01,8.1
+Melaka,1989-01-01,6.0
+Melaka,1990-01-01,4.2
+Melaka,1992-01-01,3.3
+Melaka,1993-01-01,3.2
+Melaka,1995-01-01,2.3
+Melaka,1996-01-01,1.5
+Melaka,1997-01-01,1.7
+Melaka,1998-01-01,2.5
+Melaka,1999-01-01,1.9
+Melaka,2000-01-01,1.3
+Melaka,2001-01-01,1.8
+Melaka,2002-01-01,2.9
+Melaka,2003-01-01,2.8
+Melaka,2004-01-01,1.6
+Melaka,2005-01-01,1.2
+Melaka,2006-01-01,1.3
+Melaka,2007-01-01,2.1
+Melaka,2008-01-01,1.1
+Melaka,2009-01-01,2.4
+Melaka,2010-01-01,1.0
+Melaka,2011-01-01,0.7
+Melaka,2012-01-01,0.5
+Melaka,2013-01-01,0.7
+Melaka,2014-01-01,0.9
+Melaka,2015-01-01,1.0
+Melaka,2016-01-01,0.9
+Melaka,2017-01-01,1.0
+Melaka,2018-01-01,1.1
+Melaka,2019-01-01,1.1
+Melaka,2020-01-01,2.2
+Melaka,2021-01-01,2.0
+Melaka,2022-01-01,1.6
+Negeri Sembilan,1982-01-01,2.9
+Negeri Sembilan,1983-01-01,3.8
+Negeri Sembilan,1984-01-01,4.9
+Negeri Sembilan,1985-01-01,4.7
+Negeri Sembilan,1986-01-01,7.0
+Negeri Sembilan,1987-01-01,7.6
+Negeri Sembilan,1988-01-01,6.0
+Negeri Sembilan,1989-01-01,4.9
+Negeri Sembilan,1990-01-01,3.8
+Negeri Sembilan,1992-01-01,3.3
+Negeri Sembilan,1993-01-01,2.8
+Negeri Sembilan,1995-01-01,3.1
+Negeri Sembilan,1996-01-01,2.5
+Negeri Sembilan,1997-01-01,2.6
+Negeri Sembilan,1998-01-01,3.6
+Negeri Sembilan,1999-01-01,3.8
+Negeri Sembilan,2000-01-01,3.4
+Negeri Sembilan,2001-01-01,3.2
+Negeri Sembilan,2002-01-01,3.7
+Negeri Sembilan,2003-01-01,3.5
+Negeri Sembilan,2004-01-01,3.5
+Negeri Sembilan,2005-01-01,3.6
+Negeri Sembilan,2006-01-01,4.0
+Negeri Sembilan,2007-01-01,3.6
+Negeri Sembilan,2008-01-01,3.1
+Negeri Sembilan,2009-01-01,3.9
+Negeri Sembilan,2010-01-01,3.1
+Negeri Sembilan,2011-01-01,3.0
+Negeri Sembilan,2012-01-01,3.0
+Negeri Sembilan,2013-01-01,3.1
+Negeri Sembilan,2014-01-01,3.0
+Negeri Sembilan,2015-01-01,3.1
+Negeri Sembilan,2016-01-01,2.7
+Negeri Sembilan,2017-01-01,2.8
+Negeri Sembilan,2018-01-01,3.0
+Negeri Sembilan,2019-01-01,3.1
+Negeri Sembilan,2020-01-01,3.8
+Negeri Sembilan,2021-01-01,4.2
+Negeri Sembilan,2022-01-01,3.7
+Pahang,1982-01-01,3.4
+Pahang,1983-01-01,2.7
+Pahang,1984-01-01,4.6
+Pahang,1985-01-01,4.3
+Pahang,1986-01-01,4.9
+Pahang,1987-01-01,5.1
+Pahang,1988-01-01,6.2
+Pahang,1989-01-01,3.7
+Pahang,1990-01-01,3.1
+Pahang,1992-01-01,2.8
+Pahang,1993-01-01,3.7
+Pahang,1995-01-01,3.6
+Pahang,1996-01-01,2.6
+Pahang,1997-01-01,3.0
+Pahang,1998-01-01,2.6
+Pahang,1999-01-01,3.0
+Pahang,2000-01-01,2.7
+Pahang,2001-01-01,3.1
+Pahang,2002-01-01,2.9
+Pahang,2003-01-01,3.6
+Pahang,2004-01-01,3.3
+Pahang,2005-01-01,3.3
+Pahang,2006-01-01,2.4
+Pahang,2007-01-01,3.2
+Pahang,2008-01-01,2.6
+Pahang,2009-01-01,3.0
+Pahang,2010-01-01,2.9
+Pahang,2011-01-01,2.6
+Pahang,2012-01-01,2.7
+Pahang,2013-01-01,2.8
+Pahang,2014-01-01,2.7
+Pahang,2015-01-01,2.9
+Pahang,2016-01-01,2.6
+Pahang,2017-01-01,2.9
+Pahang,2018-01-01,2.6
+Pahang,2019-01-01,2.9
+Pahang,2020-01-01,3.1
+Pahang,2021-01-01,3.3
+Pahang,2022-01-01,2.5
+Perak,1982-01-01,5.4
+Perak,1983-01-01,5.1
+Perak,1984-01-01,5.4
+Perak,1985-01-01,6.1
+Perak,1986-01-01,8.7
+Perak,1987-01-01,8.0
+Perak,1988-01-01,8.1
+Perak,1989-01-01,5.5
+Perak,1990-01-01,4.1
+Perak,1992-01-01,3.7
+Perak,1993-01-01,4.3
+Perak,1995-01-01,3.9
+Perak,1996-01-01,3.2
+Perak,1997-01-01,2.2
+Perak,1998-01-01,3.9
+Perak,1999-01-01,4.3
+Perak,2000-01-01,3.5
+Perak,2001-01-01,4.0
+Perak,2002-01-01,3.9
+Perak,2003-01-01,4.8
+Perak,2004-01-01,3.3
+Perak,2005-01-01,3.3
+Perak,2006-01-01,3.5
+Perak,2007-01-01,2.9
+Perak,2008-01-01,3.8
+Perak,2009-01-01,3.5
+Perak,2010-01-01,3.0
+Perak,2011-01-01,2.6
+Perak,2012-01-01,3.0
+Perak,2013-01-01,3.8
+Perak,2014-01-01,3.4
+Perak,2015-01-01,3.2
+Perak,2016-01-01,3.4
+Perak,2017-01-01,3.7
+Perak,2018-01-01,3.3
+Perak,2019-01-01,3.4
+Perak,2020-01-01,4.8
+Perak,2021-01-01,5.3
+Perak,2022-01-01,4.6
+Perlis,1982-01-01,4.1
+Perlis,1983-01-01,3.2
+Perlis,1984-01-01,4.6
+Perlis,1985-01-01,7.6
+Perlis,1986-01-01,8.0
+Perlis,1987-01-01,6.6
+Perlis,1988-01-01,7.6
+Perlis,1989-01-01,6.4
+Perlis,1990-01-01,4.3
+Perlis,1992-01-01,2.7
+Perlis,1993-01-01,1.4
+Perlis,1995-01-01,1.4
+Perlis,1996-01-01,2.0
+Perlis,1997-01-01,2.3
+Perlis,1998-01-01,4.3
+Perlis,1999-01-01,3.4
+Perlis,2000-01-01,2.9
+Perlis,2001-01-01,3.5
+Perlis,2002-01-01,3.1
+Perlis,2003-01-01,4.4
+Perlis,2004-01-01,3.272251308900524
+Perlis,2005-01-01,2.9
+Perlis,2006-01-01,3.2
+Perlis,2007-01-01,3.0
+Perlis,2008-01-01,2.9
+Perlis,2009-01-01,3.3
+Perlis,2010-01-01,3.3
+Perlis,2011-01-01,4.0
+Perlis,2012-01-01,3.9
+Perlis,2013-01-01,3.7
+Perlis,2014-01-01,3.3
+Perlis,2015-01-01,2.9
+Perlis,2016-01-01,2.9
+Perlis,2017-01-01,3.4
+Perlis,2018-01-01,3.4
+Perlis,2019-01-01,3.3
+Perlis,2020-01-01,4.3
+Perlis,2021-01-01,4.3
+Perlis,2022-01-01,3.9
+Pulau Pinang,1982-01-01,3.5
+Pulau Pinang,1983-01-01,3.8
+Pulau Pinang,1984-01-01,3.6
+Pulau Pinang,1985-01-01,5.0
+Pulau Pinang,1986-01-01,8.4
+Pulau Pinang,1987-01-01,6.5
+Pulau Pinang,1988-01-01,6.7
+Pulau Pinang,1989-01-01,3.9
+Pulau Pinang,1990-01-01,2.8
+Pulau Pinang,1992-01-01,1.7
+Pulau Pinang,1993-01-01,2.2
+Pulau Pinang,1995-01-01,1.4
+Pulau Pinang,1996-01-01,0.7
+Pulau Pinang,1997-01-01,1.1
+Pulau Pinang,1998-01-01,2.3
+Pulau Pinang,1999-01-01,2.4
+Pulau Pinang,2000-01-01,1.9
+Pulau Pinang,2001-01-01,2.5
+Pulau Pinang,2002-01-01,2.2
+Pulau Pinang,2003-01-01,1.7
+Pulau Pinang,2004-01-01,1.8
+Pulau Pinang,2005-01-01,2.1
+Pulau Pinang,2006-01-01,1.7
+Pulau Pinang,2007-01-01,2.1
+Pulau Pinang,2008-01-01,2.0
+Pulau Pinang,2009-01-01,2.5
+Pulau Pinang,2010-01-01,2.2
+Pulau Pinang,2011-01-01,1.9
+Pulau Pinang,2012-01-01,2.0
+Pulau Pinang,2013-01-01,1.7
+Pulau Pinang,2014-01-01,1.6
+Pulau Pinang,2015-01-01,1.6
+Pulau Pinang,2016-01-01,2.1
+Pulau Pinang,2017-01-01,2.1
+Pulau Pinang,2018-01-01,2.2
+Pulau Pinang,2019-01-01,2.0
+Pulau Pinang,2020-01-01,3.5
+Pulau Pinang,2021-01-01,3.6
+Pulau Pinang,2022-01-01,2.8
+Sabah,1982-01-01,3.0
+Sabah,1983-01-01,4.1
+Sabah,1984-01-01,6.0
+Sabah,1985-01-01,6.4
+Sabah,1986-01-01,8.2
+Sabah,1987-01-01,9.0
+Sabah,1988-01-01,8.2
+Sabah,1989-01-01,7.4
+Sabah,1990-01-01,9.0
+Sabah,1992-01-01,6.2
+Sabah,1993-01-01,7.1
+Sabah,1995-01-01,5.5
+Sabah,1996-01-01,3.9
+Sabah,1997-01-01,4.6
+Sabah,1998-01-01,4.9
+Sabah,1999-01-01,5.6
+Sabah,2000-01-01,5.8
+Sabah,2001-01-01,6.6
+Sabah,2002-01-01,5.9
+Sabah,2003-01-01,5.4
+Sabah,2004-01-01,6.5
+Sabah,2005-01-01,6.4
+Sabah,2006-01-01,5.7
+Sabah,2007-01-01,5.5
+Sabah,2008-01-01,4.9
+Sabah,2009-01-01,5.5
+Sabah,2010-01-01,5.5
+Sabah,2011-01-01,5.6
+Sabah,2012-01-01,5.6
+Sabah,2013-01-01,5.3
+Sabah,2014-01-01,4.9
+Sabah,2015-01-01,5.0
+Sabah,2016-01-01,5.4
+Sabah,2017-01-01,5.6
+Sabah,2018-01-01,5.8
+Sabah,2019-01-01,5.8
+Sabah,2020-01-01,8.0
+Sabah,2021-01-01,8.2
+Sabah,2022-01-01,7.5
+Sarawak,1982-01-01,2.8
+Sarawak,1983-01-01,5.2
+Sarawak,1984-01-01,6.7
+Sarawak,1985-01-01,7.1
+Sarawak,1986-01-01,9.0
+Sarawak,1987-01-01,9.8
+Sarawak,1988-01-01,10.3
+Sarawak,1989-01-01,9.6
+Sarawak,1990-01-01,9.9
+Sarawak,1992-01-01,7.8
+Sarawak,1993-01-01,7.0
+Sarawak,1995-01-01,4.8
+Sarawak,1996-01-01,4.4
+Sarawak,1997-01-01,3.9
+Sarawak,1998-01-01,5.0
+Sarawak,1999-01-01,4.6
+Sarawak,2000-01-01,4.3
+Sarawak,2001-01-01,4.4
+Sarawak,2002-01-01,4.0
+Sarawak,2003-01-01,3.9
+Sarawak,2004-01-01,3.8
+Sarawak,2005-01-01,4.1
+Sarawak,2006-01-01,4.1
+Sarawak,2007-01-01,4.3
+Sarawak,2008-01-01,5.3
+Sarawak,2009-01-01,4.6
+Sarawak,2010-01-01,4.4
+Sarawak,2011-01-01,4.1
+Sarawak,2012-01-01,3.5
+Sarawak,2013-01-01,3.7
+Sarawak,2014-01-01,3.1
+Sarawak,2015-01-01,3.5
+Sarawak,2016-01-01,3.3
+Sarawak,2017-01-01,3.0
+Sarawak,2018-01-01,3.2
+Sarawak,2019-01-01,3.1
+Sarawak,2020-01-01,4.3
+Sarawak,2021-01-01,4.5
+Sarawak,2022-01-01,3.7
+Selangor,1982-01-01,2.2
+Selangor,1983-01-01,2.3
+Selangor,1984-01-01,4.0
+Selangor,1985-01-01,4.7
+Selangor,1986-01-01,5.7
+Selangor,1987-01-01,5.6
+Selangor,1988-01-01,5.9
+Selangor,1989-01-01,3.9
+Selangor,1990-01-01,2.1
+Selangor,1992-01-01,2.1
+Selangor,1993-01-01,2.7
+Selangor,1995-01-01,2.0
+Selangor,1996-01-01,0.9
+Selangor,1997-01-01,1.0
+Selangor,1998-01-01,1.8
+Selangor,1999-01-01,1.9
+Selangor,2000-01-01,2.0
+Selangor,2001-01-01,2.4
+Selangor,2002-01-01,3.0
+Selangor,2003-01-01,3.2
+Selangor,2004-01-01,2.7
+Selangor,2005-01-01,3.1
+Selangor,2006-01-01,3.2
+Selangor,2007-01-01,3.0
+Selangor,2008-01-01,3.1
+Selangor,2009-01-01,3.6
+Selangor,2010-01-01,3.2
+Selangor,2011-01-01,2.4
+Selangor,2012-01-01,2.3
+Selangor,2013-01-01,2.4
+Selangor,2014-01-01,2.0
+Selangor,2015-01-01,2.4
+Selangor,2016-01-01,3.2
+Selangor,2017-01-01,2.8
+Selangor,2018-01-01,2.8
+Selangor,2019-01-01,2.9
+Selangor,2020-01-01,4.3
+Selangor,2021-01-01,4.3
+Selangor,2022-01-01,3.6
+Terengganu,1982-01-01,2.7
+Terengganu,1983-01-01,2.5
+Terengganu,1984-01-01,6.8
+Terengganu,1985-01-01,7.2
+Terengganu,1986-01-01,9.5
+Terengganu,1987-01-01,11.7
+Terengganu,1988-01-01,9.4
+Terengganu,1989-01-01,12.3
+Terengganu,1990-01-01,6.9
+Terengganu,1992-01-01,5.5
+Terengganu,1993-01-01,7.0
+Terengganu,1995-01-01,5.9
+Terengganu,1996-01-01,3.3
+Terengganu,1997-01-01,3.6
+Terengganu,1998-01-01,4.0
+Terengganu,1999-01-01,3.9
+Terengganu,2000-01-01,3.0
+Terengganu,2001-01-01,2.7
+Terengganu,2002-01-01,3.2
+Terengganu,2003-01-01,2.9
+Terengganu,2004-01-01,3.2
+Terengganu,2005-01-01,3.1
+Terengganu,2006-01-01,3.6
+Terengganu,2007-01-01,2.6
+Terengganu,2008-01-01,3.4
+Terengganu,2009-01-01,3.8
+Terengganu,2010-01-01,3.7
+Terengganu,2011-01-01,3.2
+Terengganu,2012-01-01,3.0
+Terengganu,2013-01-01,3.4
+Terengganu,2014-01-01,4.1
+Terengganu,2015-01-01,4.0
+Terengganu,2016-01-01,4.2
+Terengganu,2017-01-01,4.5
+Terengganu,2018-01-01,4.8
+Terengganu,2019-01-01,3.5
+Terengganu,2020-01-01,4.1
+Terengganu,2021-01-01,4.0
+Terengganu,2022-01-01,3.6
+W.P. Kuala Lumpur,1982-01-01,1.9
+W.P. Kuala Lumpur,1983-01-01,2.0
+W.P. Kuala Lumpur,1984-01-01,3.8
+W.P. Kuala Lumpur,1985-01-01,3.5
+W.P. Kuala Lumpur,1986-01-01,5.5
+W.P. Kuala Lumpur,1987-01-01,5.7
+W.P. Kuala Lumpur,1988-01-01,5.9
+W.P. Kuala Lumpur,1989-01-01,3.7
+W.P. Kuala Lumpur,1990-01-01,2.6
+W.P. Kuala Lumpur,1992-01-01,2.4
+W.P. Kuala Lumpur,1993-01-01,3.0
+W.P. Kuala Lumpur,1995-01-01,1.7
+W.P. Kuala Lumpur,1996-01-01,1.8
+W.P. Kuala Lumpur,1997-01-01,1.4
+W.P. Kuala Lumpur,1998-01-01,2.5
+W.P. Kuala Lumpur,1999-01-01,2.9
+W.P. Kuala Lumpur,2000-01-01,2.6
+W.P. Kuala Lumpur,2001-01-01,2.7
+W.P. Kuala Lumpur,2002-01-01,2.8
+W.P. Kuala Lumpur,2003-01-01,3.4
+W.P. Kuala Lumpur,2004-01-01,2.9
+W.P. Kuala Lumpur,2005-01-01,2.3
+W.P. Kuala Lumpur,2006-01-01,2.8
+W.P. Kuala Lumpur,2007-01-01,2.9
+W.P. Kuala Lumpur,2008-01-01,2.7
+W.P. Kuala Lumpur,2009-01-01,2.9
+W.P. Kuala Lumpur,2010-01-01,3.1
+W.P. Kuala Lumpur,2011-01-01,3.0
+W.P. Kuala Lumpur,2012-01-01,2.7
+W.P. Kuala Lumpur,2013-01-01,3.3
+W.P. Kuala Lumpur,2014-01-01,2.9
+W.P. Kuala Lumpur,2015-01-01,3.3
+W.P. Kuala Lumpur,2016-01-01,3.3
+W.P. Kuala Lumpur,2017-01-01,3.1
+W.P. Kuala Lumpur,2018-01-01,2.4
+W.P. Kuala Lumpur,2019-01-01,2.6
+W.P. Kuala Lumpur,2020-01-01,4.0
+W.P. Kuala Lumpur,2021-01-01,4.2
+W.P. Kuala Lumpur,2022-01-01,3.1
+W.P. Labuan,1992-01-01,3.3
+W.P. Labuan,1993-01-01,5.9
+W.P. Labuan,1995-01-01,4.7
+W.P. Labuan,1996-01-01,5.1
+W.P. Labuan,1997-01-01,3.3
+W.P. Labuan,1998-01-01,2.5
+W.P. Labuan,1999-01-01,4.0
+W.P. Labuan,2000-01-01,4.7
+W.P. Labuan,2001-01-01,5.4
+W.P. Labuan,2002-01-01,3.2
+W.P. Labuan,2003-01-01,4.5
+W.P. Labuan,2004-01-01,5.0
+W.P. Labuan,2005-01-01,5.1
+W.P. Labuan,2006-01-01,9.4
+W.P. Labuan,2007-01-01,4.5
+W.P. Labuan,2008-01-01,5.6
+W.P. Labuan,2009-01-01,5.6
+W.P. Labuan,2010-01-01,6.0
+W.P. Labuan,2011-01-01,4.2
+W.P. Labuan,2012-01-01,4.6
+W.P. Labuan,2013-01-01,4.1
+W.P. Labuan,2014-01-01,5.1
+W.P. Labuan,2015-01-01,5.0
+W.P. Labuan,2016-01-01,7.8
+W.P. Labuan,2017-01-01,8.5
+W.P. Labuan,2018-01-01,7.1
+W.P. Labuan,2019-01-01,6.9
+W.P. Labuan,2020-01-01,7.2
+W.P. Labuan,2021-01-01,7.4
+W.P. Labuan,2022-01-01,7.2
+W.P. Putrajaya,2011-01-01,1.1
+W.P. Putrajaya,2012-01-01,1.5
+W.P. Putrajaya,2013-01-01,1.2
+W.P. Putrajaya,2014-01-01,1.2
+W.P. Putrajaya,2015-01-01,1.0
+W.P. Putrajaya,2016-01-01,1.7
+W.P. Putrajaya,2017-01-01,1.5
+W.P. Putrajaya,2018-01-01,1.3
+W.P. Putrajaya,2019-01-01,1.2
+W.P. Putrajaya,2020-01-01,1.5
+W.P. Putrajaya,2021-01-01,1.6
+W.P. Putrajaya,2022-01-01,1.0

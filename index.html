@@ -5,21 +5,20 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
-    integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
+      integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
+  
   <body>
     <div class="slideshow">
       <div class="heading">
-        <p>Malaysia Choropleth Map</p>
+        <p>Refined Week 9 Homework</p>
       </div>
   
       <div class="slide">
@@ -29,17 +28,70 @@
           </div>
           <div class="pure-u-24-24">
             <div class="center">
-            <div id="symbol_map_spec"></div>  
-          </div>
+              <div id="choropleth_map_spec"></div>  
+            </div>
           </div>
         </div>
-  </div>
-    </div>
-    <script type="text/javascript">
-      var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW9/main/js/tree_cover_map.json";
-      // var spec = "../js/tree_cover_map.json";
-      vegaEmbed('#symbol_map_spec', spec, { "actions": false }).then(function(result) {}).catch(console.error);
+      </div>   
 
+      <div class="heading">
+        <p>Week 10 Homework</p>
+      </div>  
+
+      <div class="slide">
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading">Radial Tree of Malaysia</p>
+            <p class="text columns-1" style="margin-bottom: 2em;">
+              Hover your mouse on the node to see the <strong class="fruit">tooltips</strong>.
+            </p>
+          </div>
+          <div class="pure-u-24-24">
+            <div class="center">
+              <div id="radial_tree_spec"></div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section for the Sunburst Chart -->
+      <div class="heading">
+        <p>Week 11 Homework</p>
+      </div>  
+
+      <div class="slide">
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading">Zoomable Sunburst Chart</p>
+          </div>
+          <div class="pure-u-24-24">
+            <div class="center">
+              <div id="sunburst_chart"></div> <!-- This div is where the D3 sunburst will render -->
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div>
+
+    <div id="tooltip" style="position: absolute; visibility: hidden; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px; border-radius: 5px; font-size: 12px;"></div>
+
+    <!-- Scripts for Vega visualizations -->
+    <script type="text/javascript">
+      var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/js/malaysia_choropleth_map.json";
+      vegaEmbed('#choropleth_map_spec', spec, { "actions": false }).then(function(result) {}).catch(console.error);
+
+      var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/js/radial_tree.js";
+      vegaEmbed('#radial_tree_spec', spec2, { "actions": false }).then(function(result) {}).catch(console.error);
     </script>
+
+    <!-- External script for D3 Zoomable Sunburst Chart -->
+    <script src="sunburst_chart.js"></script>
+    
+    <!-- Call the function to create the sunburst chart -->
+    <script>
+      // Pass the URL of the CSV data and the container for the chart
+      createSunburstChart('data/zoomable_gdp_data.csv', '#sunburst_chart');
+    </script>
+
   </body>
 </html>
