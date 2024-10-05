@@ -1,0 +1,19 @@
+[
+    {"year": 2008, "net": 23.92450105, "gdp_capita": 31259.015, "side": "top"},
+    {"year": 2009, "net": 5.12123719, "gdp_capita": 30185.653, "side": "top"},
+    {"year": 2010, "net": 29.18321117, "gdp_capita": 31782.997, "side": "top"},
+    {"year": 2011, "net": 37.32458397, "gdp_capita": 32920.119, "side": "right"},
+    {"year": 2012, "net": 28.53689999, "gdp_capita": 34195.51, "side": "left"},
+    {"year": 2013, "net": 38.17474733, "gdp_capita": 34966.496, "side": "right"},
+    {"year": 2014, "net": 35.6000284, "gdp_capita": 36469.753, "side": "left"},
+    {"year": 2015, "net": 39.37658307, "gdp_capita": 37739.0, "side": "top"},
+    {"year": 2016, "net": 47.02482947, "gdp_capita": 38861.0, "side": "right"},
+    {"year": 2017, "net": 40.41903805, "gdp_capita": 40620.0, "side": "top"},
+    {"year": 2018, "net": 30.74098329, "gdp_capita": 42115.0, "side": "right"},
+    {"year": 2019, "net": 32.36419502, "gdp_capita": 43783.0, "side": "top"},
+    {"year": 2020, "net": 13.28096589, "gdp_capita": 41490.0, "side": "left"},
+    {"year": 2021, "net": 50.43792356, "gdp_capita": 42697.078, "side": "top"},
+    {"year": 2022, "net": 75.4173573, "gdp_capita": 46305.584, "side": "right"},
+    {"year": 2023, "net": 40.40315131, "gdp_capita": 46975.643, "side": "top"}
+  ]
+  

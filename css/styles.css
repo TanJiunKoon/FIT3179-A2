@@ -183,3 +183,24 @@
     .vega-bindings input[type="select"] {
       background-color: transparent;
     }
+
+    #replay-button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    
+    /* Tooltip styling */
+    .tooltip {
+      position: absolute;
+      text-align: left;
+      width: auto;
+      height: auto;
+      padding: 10px;
+      font: 12px sans-serif;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      pointer-events: none;
+    }
+    

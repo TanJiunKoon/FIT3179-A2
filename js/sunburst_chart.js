@@ -94,7 +94,15 @@ function createSunburstChart(csvUrl, chartContainer) {
           .attr("fill", "none")
           .attr("pointer-events", "all")
           .on("click", clicked);
-  
+      
+      // Add "Return" text in the center circle
+      const centerText = g.append("text")
+          .attr("text-anchor", "middle")
+          .attr("dy", "0.35em")
+          .style("font-size", "16px")
+          .style("font-weight", "bold")
+          .text("Click to Return");
+      
       function clicked(event, p) {
         parent.datum(p.parent || root);
   

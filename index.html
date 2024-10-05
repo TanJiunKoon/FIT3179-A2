@@ -56,7 +56,7 @@
 
       <!-- Section for the Sunburst Chart -->
       <div class="heading">
-        <p>Week 11 Homework</p>
+        <p>Zoomable Sunburst Chart</p>
       </div>  
 
       <div class="slide">
@@ -70,17 +70,46 @@
             </div>
           </div>
         </div>
-      </div>   
+      </div> 
+      
+      <!-- Week 12 Homework - Connected Scatterplot -->
+      <div class="heading">
+        <p>Week 12 Homework</p>
+      </div>  
+
+      <div class="slide">
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading">Connected Scatterplot Chart</p>
+          </div>
+          <div class="pure-u-24-24">
+            <div class="center">
+              <div id="connected_scatterplot_chart"></div> <!-- Scatterplot Chart goes here -->
+            </div>
+          </div>
+          <div class="pure-u-24-24">
+            <div class="left">
+              <!-- Replay Button under the chart -->
+              <button id="replay-button" style="margin-top: 20px; padding: 5px 10px; font-size: 12px; background-color: #d3d3d3; border: 1px solid #888; color: black; cursor: pointer;">
+                Replay Animation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
+    
     <div id="tooltip" style="position: absolute; visibility: hidden; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px; border-radius: 5px; font-size: 12px;"></div>
 
     <!-- Scripts for Vega visualizations -->
     <script type="text/javascript">
-      var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/js/malaysia_choropleth_map.json";
+      var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/malaysia_choropleth_map.json";
       vegaEmbed('#choropleth_map_spec', spec, { "actions": false }).then(function(result) {}).catch(console.error);
 
-      var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/js/radial_tree.js";
+      var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/radial_tree.js";
       vegaEmbed('#radial_tree_spec', spec2, { "actions": false }).then(function(result) {}).catch(console.error);
     </script>
 
@@ -92,6 +121,9 @@
       // Pass the URL of the CSV data and the container for the chart
       createSunburstChart('data/zoomable_gdp_data.csv', '#sunburst_chart');
     </script>
+
+    <!-- External script for the Connected Scatterplot -->
+    <script src="js/connected_scatterplot.js"></script>
 
   </body>
 </html>
