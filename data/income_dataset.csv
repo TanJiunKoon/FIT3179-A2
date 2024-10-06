@@ -1,0 +1,95 @@
+state,date,income_mean
+Johor,1976-01-01,513
+Johor,1979-01-01,731
+Johor,1984-01-01,1065
+Johor,1987-01-01,1060
+Johor,1989-01-01,1150
+Johor,1992-01-01,1713
+Johor,1995-01-01,2138
+Johor,1997-01-01,2772
+Johor,1999-01-01,2646
+Johor,2002-01-01,2963
+Johor,2004-01-01,3076
+Johor,2007-01-01,3457
+Johor,2009-01-01,3835
+Johor,2012-01-01,4658
+Johor,2014-01-01,6207
+Johor,2016-01-01,6928
+Johor,2019-01-01,8013
+Johor,2020-01-01,7264
+Johor,2022-01-01,8517
+Pulau Pinang,1976-01-01,589
+Pulau Pinang,1979-01-01,840
+Pulau Pinang,1984-01-01,1183
+Pulau Pinang,1987-01-01,1130
+Pulau Pinang,1989-01-01,1326
+Pulau Pinang,1992-01-01,1821
+Pulau Pinang,1995-01-01,2225
+Pulau Pinang,1997-01-01,3130
+Pulau Pinang,1999-01-01,3128
+Pulau Pinang,2002-01-01,3496
+Pulau Pinang,2004-01-01,3531
+Pulau Pinang,2007-01-01,4004
+Pulau Pinang,2009-01-01,4407
+Pulau Pinang,2012-01-01,5055
+Pulau Pinang,2014-01-01,5993
+Pulau Pinang,2016-01-01,6771
+Pulau Pinang,2019-01-01,7774
+Pulau Pinang,2020-01-01,6850
+Pulau Pinang,2022-01-01,8267
+Sarawak,1976-01-01,426
+Sarawak,1979-01-01,582
+Sarawak,1984-01-01,1033
+Sarawak,1987-01-01,1141
+Sarawak,1989-01-01,1190
+Sarawak,1992-01-01,1480
+Sarawak,1995-01-01,1886
+Sarawak,1997-01-01,2242
+Sarawak,1999-01-01,2276
+Sarawak,2002-01-01,2515
+Sarawak,2004-01-01,2725
+Sarawak,2007-01-01,3349
+Sarawak,2009-01-01,3581
+Sarawak,2012-01-01,4293
+Sarawak,2014-01-01,4934
+Sarawak,2016-01-01,5387
+Sarawak,2019-01-01,5959
+Sarawak,2020-01-01,5087
+Sarawak,2022-01-01,6457
+Selangor,1976-01-01,735
+Selangor,1979-01-01,1067
+Selangor,1984-01-01,1590
+Selangor,1987-01-01,1558
+Selangor,1989-01-01,1658
+Selangor,1992-01-01,2280
+Selangor,1995-01-01,3162
+Selangor,1997-01-01,4006
+Selangor,1999-01-01,3702
+Selangor,2002-01-01,4406
+Selangor,2004-01-01,5175
+Selangor,2007-01-01,5580
+Selangor,2009-01-01,5962
+Selangor,2012-01-01,7023
+Selangor,2014-01-01,8252
+Selangor,2016-01-01,9463
+Selangor,2019-01-01,10827
+Selangor,2020-01-01,9668
+Selangor,2022-01-01,12233
+W.P. Kuala Lumpur,1976-01-01,1058
+W.P. Kuala Lumpur,1984-01-01,1920
+W.P. Kuala Lumpur,1987-01-01,1790
+W.P. Kuala Lumpur,1989-01-01,1824
+W.P. Kuala Lumpur,1992-01-01,2429
+W.P. Kuala Lumpur,1995-01-01,3371
+W.P. Kuala Lumpur,1997-01-01,4768
+W.P. Kuala Lumpur,1999-01-01,4105
+W.P. Kuala Lumpur,2002-01-01,4930
+W.P. Kuala Lumpur,2004-01-01,5011
+W.P. Kuala Lumpur,2007-01-01,5322
+W.P. Kuala Lumpur,2009-01-01,5488
+W.P. Kuala Lumpur,2012-01-01,8586
+W.P. Kuala Lumpur,2014-01-01,10629
+W.P. Kuala Lumpur,2016-01-01,11692
+W.P. Kuala Lumpur,2019-01-01,13257
+W.P. Kuala Lumpur,2020-01-01,11728
+W.P. Kuala Lumpur,2022-01-01,13325
