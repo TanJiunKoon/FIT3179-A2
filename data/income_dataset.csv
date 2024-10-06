@@ -1,95 +1,96 @@
-state,date,income_mean
-Johor,1976-01-01,513
-Johor,1979-01-01,731
-Johor,1984-01-01,1065
-Johor,1987-01-01,1060
-Johor,1989-01-01,1150
-Johor,1992-01-01,1713
-Johor,1995-01-01,2138
-Johor,1997-01-01,2772
-Johor,1999-01-01,2646
-Johor,2002-01-01,2963
-Johor,2004-01-01,3076
-Johor,2007-01-01,3457
-Johor,2009-01-01,3835
-Johor,2012-01-01,4658
-Johor,2014-01-01,6207
-Johor,2016-01-01,6928
-Johor,2019-01-01,8013
-Johor,2020-01-01,7264
-Johor,2022-01-01,8517
-Pulau Pinang,1976-01-01,589
-Pulau Pinang,1979-01-01,840
-Pulau Pinang,1984-01-01,1183
-Pulau Pinang,1987-01-01,1130
-Pulau Pinang,1989-01-01,1326
-Pulau Pinang,1992-01-01,1821
-Pulau Pinang,1995-01-01,2225
-Pulau Pinang,1997-01-01,3130
-Pulau Pinang,1999-01-01,3128
-Pulau Pinang,2002-01-01,3496
-Pulau Pinang,2004-01-01,3531
-Pulau Pinang,2007-01-01,4004
-Pulau Pinang,2009-01-01,4407
-Pulau Pinang,2012-01-01,5055
-Pulau Pinang,2014-01-01,5993
-Pulau Pinang,2016-01-01,6771
-Pulau Pinang,2019-01-01,7774
-Pulau Pinang,2020-01-01,6850
-Pulau Pinang,2022-01-01,8267
-Sarawak,1976-01-01,426
-Sarawak,1979-01-01,582
-Sarawak,1984-01-01,1033
-Sarawak,1987-01-01,1141
-Sarawak,1989-01-01,1190
-Sarawak,1992-01-01,1480
-Sarawak,1995-01-01,1886
-Sarawak,1997-01-01,2242
-Sarawak,1999-01-01,2276
-Sarawak,2002-01-01,2515
-Sarawak,2004-01-01,2725
-Sarawak,2007-01-01,3349
-Sarawak,2009-01-01,3581
-Sarawak,2012-01-01,4293
-Sarawak,2014-01-01,4934
-Sarawak,2016-01-01,5387
-Sarawak,2019-01-01,5959
-Sarawak,2020-01-01,5087
-Sarawak,2022-01-01,6457
-Selangor,1976-01-01,735
-Selangor,1979-01-01,1067
-Selangor,1984-01-01,1590
-Selangor,1987-01-01,1558
-Selangor,1989-01-01,1658
-Selangor,1992-01-01,2280
-Selangor,1995-01-01,3162
-Selangor,1997-01-01,4006
-Selangor,1999-01-01,3702
-Selangor,2002-01-01,4406
-Selangor,2004-01-01,5175
-Selangor,2007-01-01,5580
-Selangor,2009-01-01,5962
-Selangor,2012-01-01,7023
-Selangor,2014-01-01,8252
-Selangor,2016-01-01,9463
-Selangor,2019-01-01,10827
-Selangor,2020-01-01,9668
-Selangor,2022-01-01,12233
-W.P. Kuala Lumpur,1976-01-01,1058
-W.P. Kuala Lumpur,1984-01-01,1920
-W.P. Kuala Lumpur,1987-01-01,1790
-W.P. Kuala Lumpur,1989-01-01,1824
-W.P. Kuala Lumpur,1992-01-01,2429
-W.P. Kuala Lumpur,1995-01-01,3371
-W.P. Kuala Lumpur,1997-01-01,4768
-W.P. Kuala Lumpur,1999-01-01,4105
-W.P. Kuala Lumpur,2002-01-01,4930
-W.P. Kuala Lumpur,2004-01-01,5011
-W.P. Kuala Lumpur,2007-01-01,5322
-W.P. Kuala Lumpur,2009-01-01,5488
-W.P. Kuala Lumpur,2012-01-01,8586
-W.P. Kuala Lumpur,2014-01-01,10629
-W.P. Kuala Lumpur,2016-01-01,11692
-W.P. Kuala Lumpur,2019-01-01,13257
-W.P. Kuala Lumpur,2020-01-01,11728
-W.P. Kuala Lumpur,2022-01-01,13325
+[
+  {"state": "Johor", "date": "1976-01-01", "income_mean": 513},
+  {"state": "Johor", "date": "1979-01-01", "income_mean": 731},
+  {"state": "Johor", "date": "1984-01-01", "income_mean": 1065},
+  {"state": "Johor", "date": "1987-01-01", "income_mean": 1060},
+  {"state": "Johor", "date": "1989-01-01", "income_mean": 1150},
+  {"state": "Johor", "date": "1992-01-01", "income_mean": 1713},
+  {"state": "Johor", "date": "1995-01-01", "income_mean": 2138},
+  {"state": "Johor", "date": "1997-01-01", "income_mean": 2772},
+  {"state": "Johor", "date": "1999-01-01", "income_mean": 2646},
+  {"state": "Johor", "date": "2002-01-01", "income_mean": 2963},
+  {"state": "Johor", "date": "2004-01-01", "income_mean": 3076},
+  {"state": "Johor", "date": "2007-01-01", "income_mean": 3457},
+  {"state": "Johor", "date": "2009-01-01", "income_mean": 3835},
+  {"state": "Johor", "date": "2012-01-01", "income_mean": 4658},
+  {"state": "Johor", "date": "2014-01-01", "income_mean": 6207},
+  {"state": "Johor", "date": "2016-01-01", "income_mean": 6928},
+  {"state": "Johor", "date": "2019-01-01", "income_mean": 8013},
+  {"state": "Johor", "date": "2020-01-01", "income_mean": 7264},
+  {"state": "Johor", "date": "2022-01-01", "income_mean": 8517},
+  {"state": "Pulau Pinang", "date": "1976-01-01", "income_mean": 589},
+  {"state": "Pulau Pinang", "date": "1979-01-01", "income_mean": 840},
+  {"state": "Pulau Pinang", "date": "1984-01-01", "income_mean": 1183},
+  {"state": "Pulau Pinang", "date": "1987-01-01", "income_mean": 1130},
+  {"state": "Pulau Pinang", "date": "1989-01-01", "income_mean": 1326},
+  {"state": "Pulau Pinang", "date": "1992-01-01", "income_mean": 1821},
+  {"state": "Pulau Pinang", "date": "1995-01-01", "income_mean": 2225},
+  {"state": "Pulau Pinang", "date": "1997-01-01", "income_mean": 3130},
+  {"state": "Pulau Pinang", "date": "1999-01-01", "income_mean": 3128},
+  {"state": "Pulau Pinang", "date": "2002-01-01", "income_mean": 3496},
+  {"state": "Pulau Pinang", "date": "2004-01-01", "income_mean": 3531},
+  {"state": "Pulau Pinang", "date": "2007-01-01", "income_mean": 4004},
+  {"state": "Pulau Pinang", "date": "2009-01-01", "income_mean": 4407},
+  {"state": "Pulau Pinang", "date": "2012-01-01", "income_mean": 5055},
+  {"state": "Pulau Pinang", "date": "2014-01-01", "income_mean": 5993},
+  {"state": "Pulau Pinang", "date": "2016-01-01", "income_mean": 6771},
+  {"state": "Pulau Pinang", "date": "2019-01-01", "income_mean": 7774},
+  {"state": "Pulau Pinang", "date": "2020-01-01", "income_mean": 6850},
+  {"state": "Pulau Pinang", "date": "2022-01-01", "income_mean": 8267},
+  {"state": "Sarawak", "date": "1976-01-01", "income_mean": 426},
+  {"state": "Sarawak", "date": "1979-01-01", "income_mean": 582},
+  {"state": "Sarawak", "date": "1984-01-01", "income_mean": 1033},
+  {"state": "Sarawak", "date": "1987-01-01", "income_mean": 1141},
+  {"state": "Sarawak", "date": "1989-01-01", "income_mean": 1190},
+  {"state": "Sarawak", "date": "1992-01-01", "income_mean": 1480},
+  {"state": "Sarawak", "date": "1995-01-01", "income_mean": 1886},
+  {"state": "Sarawak", "date": "1997-01-01", "income_mean": 2242},
+  {"state": "Sarawak", "date": "1999-01-01", "income_mean": 2276},
+  {"state": "Sarawak", "date": "2002-01-01", "income_mean": 2515},
+  {"state": "Sarawak", "date": "2004-01-01", "income_mean": 2725},
+  {"state": "Sarawak", "date": "2007-01-01", "income_mean": 3349},
+  {"state": "Sarawak", "date": "2009-01-01", "income_mean": 3581},
+  {"state": "Sarawak", "date": "2012-01-01", "income_mean": 4293},
+  {"state": "Sarawak", "date": "2014-01-01", "income_mean": 4934},
+  {"state": "Sarawak", "date": "2016-01-01", "income_mean": 5387},
+  {"state": "Sarawak", "date": "2019-01-01", "income_mean": 5959},
+  {"state": "Sarawak", "date": "2020-01-01", "income_mean": 5087},
+  {"state": "Sarawak", "date": "2022-01-01", "income_mean": 6457},
+  {"state": "Selangor", "date": "1976-01-01", "income_mean": 735},
+  {"state": "Selangor", "date": "1979-01-01", "income_mean": 1067},
+  {"state": "Selangor", "date": "1984-01-01", "income_mean": 1590},
+  {"state": "Selangor", "date": "1987-01-01", "income_mean": 1558},
+  {"state": "Selangor", "date": "1989-01-01", "income_mean": 1658},
+  {"state": "Selangor", "date": "1992-01-01", "income_mean": 2280},
+  {"state": "Selangor", "date": "1995-01-01", "income_mean": 3162},
+  {"state": "Selangor", "date": "1997-01-01", "income_mean": 4006},
+  {"state": "Selangor", "date": "1999-01-01", "income_mean": 3702},
+  {"state": "Selangor", "date": "2002-01-01", "income_mean": 4406},
+  {"state": "Selangor", "date": "2004-01-01", "income_mean": 5175},
+  {"state": "Selangor", "date": "2007-01-01", "income_mean": 5580},
+  {"state": "Selangor", "date": "2009-01-01", "income_mean": 5962},
+  {"state": "Selangor", "date": "2012-01-01", "income_mean": 7023},
+  {"state": "Selangor", "date": "2014-01-01", "income_mean": 8252},
+  {"state": "Selangor", "date": "2016-01-01", "income_mean": 9463},
+  {"state": "Selangor", "date": "2019-01-01", "income_mean": 10827},
+  {"state": "Selangor", "date": "2020-01-01", "income_mean": 9668},
+  {"state": "Selangor", "date": "2022-01-01", "income_mean": 12233},
+  {"state": "W.P. Kuala Lumpur", "date": "1976-01-01", "income_mean": 1058},
+  {"state": "W.P. Kuala Lumpur", "date": "1984-01-01", "income_mean": 1920},
+  {"state": "W.P. Kuala Lumpur", "date": "1987-01-01", "income_mean": 1790},
+  {"state": "W.P. Kuala Lumpur", "date": "1989-01-01", "income_mean": 1824},
+  {"state": "W.P. Kuala Lumpur", "date": "1992-01-01", "income_mean": 2429},
+  {"state": "W.P. Kuala Lumpur", "date": "1995-01-01", "income_mean": 3371},
+  {"state": "W.P. Kuala Lumpur", "date": "1997-01-01", "income_mean": 4768},
+  {"state": "W.P. Kuala Lumpur", "date": "1999-01-01", "income_mean": 4105},
+  {"state": "W.P. Kuala Lumpur", "date": "2002-01-01", "income_mean": 4930},
+  {"state": "W.P. Kuala Lumpur", "date": "2004-01-01", "income_mean": 5011},
+  {"state": "W.P. Kuala Lumpur", "date": "2007-01-01", "income_mean": 5322},
+  {"state": "W.P. Kuala Lumpur", "date": "2009-01-01", "income_mean": 5488},
+  {"state": "W.P. Kuala Lumpur", "date": "2012-01-01", "income_mean": 8586},
+  {"state": "W.P. Kuala Lumpur", "date": "2014-01-01", "income_mean": 10629},
+  {"state": "W.P. Kuala Lumpur", "date": "2016-01-01", "income_mean": 11692},
+  {"state": "W.P. Kuala Lumpur", "date": "2019-01-01", "income_mean": 13257},
+  {"state": "W.P. Kuala Lumpur", "date": "2020-01-01", "income_mean": 11728},
+  {"state": "W.P. Kuala Lumpur", "date": "2022-01-01", "income_mean": 13325}
+]
