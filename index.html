@@ -107,10 +107,20 @@
     <!-- Scripts for Vega visualizations -->
     <script type="text/javascript">
       var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/malaysia_choropleth_map.json";
-      vegaEmbed('#choropleth_map_spec', spec, { "actions": false }).then(function(result) {}).catch(console.error);
+      vegaEmbed('#choropleth_map_spec', spec, { actions: {
+        export: true, // Enable export as image options
+        source: true, // View source JSON
+        compiled: false, // View compiled Vega spec
+        editor: true   // Open in Vega Editor
+      } }).then(function(result) {}).catch(console.error);
 
       var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/radial_tree.js";
-      vegaEmbed('#radial_tree_spec', spec2, { "actions": false }).then(function(result) {}).catch(console.error);
+      vegaEmbed('#radial_tree_spec', spec2, { actions: {
+        export: true, // Enable export as image options
+        source: true, // View source JSON
+        compiled: false, // View compiled Vega spec
+        editor: true   // Open in Vega Editor
+      } }).then(function(result) {}).catch(console.error);
     </script>
 
     <!-- External script for D3 Zoomable Sunburst Chart -->
