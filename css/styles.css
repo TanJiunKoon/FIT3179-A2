@@ -84,10 +84,17 @@
     position: absolute;
     }
     
+    @font-face {
+      font-family: 'Sage';
+      src: url('path/to/your/font-file/Sage-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  
     #title {
-    height: 300px;
-    font-family: 'Roboto Slab', serif;
-    font-weight:900;
+      height: 150px;
+      font-family: 'Sage', serif; /* Apply Sage font, fallback to generic serif */
+      font-weight: 900;
     }
     
     .text {
