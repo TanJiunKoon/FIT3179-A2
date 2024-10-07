@@ -156,7 +156,7 @@
     },
     {
       "data": {
-        "url": "data/annotations.csv",
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/annotations.csv",
         "format": { "type": "csv" }
       },
       "encoding": {

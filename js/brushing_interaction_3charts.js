@@ -1,149 +1,148 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "vconcat": [
-      {
-        "hconcat": [
-          {
-            "width": 500,
-            "height": 400,
-            "data": {
-              "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
-            },
-            "transform": [
-              {
-                "filter": {
-                  "param": "time_brush"
-                }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "width": 500,
+          "height": 400,
+          "data": {
+            "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "time_brush"
               }
-            ],
-            "mark": "area",
-            "encoding": {
-              "x": {
-                "field": "date",
-                "type": "temporal",
-                "axis": { "title": "Date" }
-              },
-              "y": {
+            }
+          ],
+          "mark": "area",
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": { "title": "Date" }
+            },
+            "y": {
+              "field": "income_mean",
+              "type": "quantitative",
+              "aggregate": "sum",
+              "stack": "zero",
+              "axis": { "title": "Total Income" }
+            },
+            "color": {
+              "field": "state",
+              "type": "nominal",
+              "legend": null
+            },
+            "tooltip": [
+              { "field": "state", "type": "nominal" },
+              {
                 "field": "income_mean",
                 "type": "quantitative",
                 "aggregate": "sum",
-                "stack": "zero",
-                "axis": { "title": "Total Income" }
-              },
-              "color": {
-                "field": "state",
-                "type": "nominal",
-                "legend": null
-              },
-              "tooltip": [
-                { "field": "state", "type": "nominal" },
-                {
-                  "field": "income_mean",
-                  "type": "quantitative",
-                  "aggregate": "sum",
-                  "title": "Total Income"
-                }
-              ]
-            }
-          },
-          {
-            "width": 300,
-            "height": 400,
-            "data": {
-              "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
-            },
-            "transform": [
-              {
-                "filter": {
-                  "param": "time_brush"
-                }
-              },
-              {
-                "aggregate": [
-                  {
-                    "op": "mean",
-                    "field": "income_mean",
-                    "as": "avg_income"
-                  }
-                ],
-                "groupby": ["state"]
+                "title": "Total Income"
               }
-            ],
-            "layer": [
-              {
-                "mark": {
-                  "type": "circle",
-                  "opacity": 0.8
+            ]
+          }
+        },
+        {
+          "width": 300,
+          "height": 400,
+          "data": {
+            "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "time_brush"
+              }
+            },
+            {
+              "aggregate": [
+                {
+                  "op": "mean",
+                  "field": "income_mean",
+                  "as": "avg_income"
+                }
+              ],
+              "groupby": ["state"]
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "circle",
+                "opacity": 0.8
+              },
+              "encoding": {
+                "x": { "field": "state", "type": "nominal", "axis": null },
+                "y": { "field": "state", "type": "nominal", "axis": null },
+                "size": {
+                  "field": "avg_income",
+                  "type": "quantitative",
+                  "scale": { "range": [1000, 10000] },
+                  "legend": null  // Added this line to remove the size legend
                 },
-                "encoding": {
-                  "x": { "field": "state", "type": "nominal", "axis": null },
-                  "y": { "field": "state", "type": "nominal", "axis": null },
-                  "size": {
+                "color": { "field": "state", "type": "nominal", "legend": null },
+                "tooltip": [
+                  { "field": "state", "type": "nominal" },
+                  {
                     "field": "avg_income",
                     "type": "quantitative",
-                    "scale": { "range": [1000, 10000] },
-                    "legend": null  // Added this line to remove the size legend
-                  },
-                  "color": { "field": "state", "type": "nominal", "legend": null },
-                  "tooltip": [
-                    { "field": "state", "type": "nominal" },
-                    {
-                      "field": "avg_income",
-                      "type": "quantitative",
-                      "title": "Average Income"
-                    }
-                  ]
-                }
-              },
-              {
-                "mark": {
-                  "type": "text",
-                  "align": "center",
-                  "baseline": "middle",
-                  "fontSize": 12
-                },
-                "encoding": {
-                  "x": { "field": "state", "type": "nominal", "axis": null },
-                  "y": { "field": "state", "type": "nominal", "axis": null },
-                  "text": { "field": "state", "type": "nominal" },
-                  "color": { "value": "black" }
-                }
+                    "title": "Average Income"
+                  }
+                ]
               }
-            ],
-            "config": {
-              "view": { "stroke": null },
-              "axis": { "grid": false }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "fontSize": 12
+              },
+              "encoding": {
+                "x": { "field": "state", "type": "nominal", "axis": null },
+                "y": { "field": "state", "type": "nominal", "axis": null },
+                "text": { "field": "state", "type": "nominal" },
+                "color": { "value": "black" }
+              }
             }
-          }
-        ]
-      },
-      {
-        "width": 800,
-        "height": 100,
-        "data": {
-          "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
-        },
-        "mark": { "type": "line", "color": "#fdbe85" },
-        "params": [
-          {
-            "name": "time_brush",
-            "select": { "type": "interval", "encodings": ["x"] }
-          }
-        ],
-        "encoding": {
-          "x": {
-            "field": "date",
-            "type": "temporal",
-            "axis": { "title": "Date" }
-          },
-          "y": {
-            "field": "income_mean",
-            "type": "quantitative",
-            "aggregate": "mean",
-            "axis": { "title": "Average Income" }
+          ],
+          "config": {
+            "view": { "stroke": null },
+            "axis": { "grid": false }
           }
         }
+      ]
+    },
+    {
+      "width": 800,
+      "height": 100,
+      "data": {
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
+      },
+      "mark": { "type": "line", "color": "#fdbe85" },
+      "params": [
+        {
+          "name": "time_brush",
+          "select": { "type": "interval", "encodings": ["x"] }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "axis": { "title": "Date" }
+        },
+        "y": {
+          "field": "income_mean",
+          "type": "quantitative",
+          "aggregate": "mean",
+          "axis": { "title": "Average Income" }
+        }
       }
-    ]
-  }
-  
+    }
+  ]
+}
