@@ -71,7 +71,7 @@
         </div>
       </div> 
       
-      <!-- Week 12 Homework - Connected Scatterplot -->
+      <!-- Connected Scatterplot -->
       <div class="heading">
         <p>Animated Connected Scatterplot Chart</p>
       </div>  
@@ -97,7 +97,20 @@
         </div>
       </div>
 
+      <!-- Section for the Vega Brushing Interaction 3 Charts -->
+      <div class="heading">
+        <p>Brushing Interaction 3 Charts</p>
+      </div>
 
+      <div class="slide">
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <div class="center">
+              <div id="brushing_interaction_3charts"></div> <!-- This div is where the new Vega chart will render -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     
@@ -115,6 +128,14 @@
 
       var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/radial_tree.js";
       vegaEmbed('#radial_tree_spec', spec2, { actions: {
+        export: true, // Enable export as image options
+        source: true, // View source JSON
+        compiled: false, // View compiled Vega spec
+        editor: true   // Open in Vega Editor
+      } }).then(function(result) {}).catch(console.error);
+
+      var spec3 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/brushing_interaction_3charts.js";
+      vegaEmbed('#brushing_interaction_3charts', spec3, { actions: {
         export: true, // Enable export as image options
         source: true, // View source JSON
         compiled: false, // View compiled Vega spec
