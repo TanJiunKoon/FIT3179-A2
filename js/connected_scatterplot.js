@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 .attr("font-weight", "bold")
                 .attr("text-anchor", "end")
                 .attr("fill", "currentColor")
-                .attr("font-size", "18px")  // Consistent font size for axis label
+                .attr("font-size", "17px")  // Consistent font size for axis label
                 .text("Net Foreign Direct Investment (FDI) Flows"));
   
         // Add Y-axis
@@ -80,12 +80,12 @@ document.addEventListener("DOMContentLoaded", function() {
               .attr("text-anchor", "start")
               .attr("font-weight", "bold")
               .attr("fill", "currentColor")
-              .attr("font-size", "18px")  // Consistent font size for axis label
+              .attr("font-size", "17px")  // Consistent font size for axis label
               .text("Gross Domestic Product (GDP) per Capita"));
   
         // Increase the font size of tick values on both axes
         svg.selectAll(".tick text")
-          .attr("font-size", "18px");  // Bigger font for tick values
+          .attr("font-size", "14px");  // Bigger font for tick values
   
         // Draw the line with animation
         svg.append("path")
