@@ -82,7 +82,7 @@
                   "field": "avg_income",
                   "type": "quantitative",
                   "scale": { "range": [1000, 10000] },
-                  "legend": null  // Added this line to remove the size legend
+                  "legend": null 
                 },
                 "color": { "field": "state", "type": "nominal", "legend": null },
                 "tooltip": [
