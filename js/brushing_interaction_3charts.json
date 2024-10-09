@@ -44,9 +44,6 @@
                 "title": "Total Income"
               }
             ]
-          },
-          "config": {
-            "background": "#f0f4f8"  // Add this line to match your webpage background color
           }
         },
         {
@@ -114,7 +111,6 @@
             }
           ],
           "config": {
-            "background": "#f0f4f8",  // Add this line to match your webpage background color
             "view": { "stroke": null },
             "axis": { "grid": false }
           }
@@ -146,9 +142,6 @@
           "aggregate": "mean",
           "axis": { "title": "Average Income" }
         }
-      },
-      "config": {
-        "background": "#f0f4f8"  // Add this line to match your webpage background color
       }
     }
   ]
