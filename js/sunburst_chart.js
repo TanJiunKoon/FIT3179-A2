@@ -28,7 +28,7 @@ function createSunburstChart(csvUrl, chartContainer) {
           .attr("width", width)
           .attr("height", height)
           .attr("viewBox", [-width / 2, -height / 2, width, height])
-          .style("font", "10px sans-serif");
+          .style("font", "16px sans-serif");
   
       const g = svg.append("g");
   

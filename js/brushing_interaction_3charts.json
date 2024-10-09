@@ -4,7 +4,7 @@
     {
       "hconcat": [
         {
-          "width": 500,
+          "width": 700,
           "height": 400,
           "data": {
             "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
@@ -44,10 +44,13 @@
                 "title": "Total Income"
               }
             ]
+          },
+          "config": {
+            "background": "#f0f4f8"  // Add this line to match your webpage background color
           }
         },
         {
-          "width": 300,
+          "width": 420,
           "height": 400,
           "data": {
             "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
@@ -111,6 +114,7 @@
             }
           ],
           "config": {
+            "background": "#f0f4f8",  // Add this line to match your webpage background color
             "view": { "stroke": null },
             "axis": { "grid": false }
           }
@@ -118,7 +122,7 @@
       ]
     },
     {
-      "width": 800,
+      "width": 1120,
       "height": 100,
       "data": {
         "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
@@ -142,6 +146,9 @@
           "aggregate": "mean",
           "axis": { "title": "Average Income" }
         }
+      },
+      "config": {
+        "background": "#f0f4f8"  // Add this line to match your webpage background color
       }
     }
   ]

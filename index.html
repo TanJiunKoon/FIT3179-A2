@@ -62,7 +62,7 @@
         <div class="pure-g">
           <div class="pure-u-24-24">
             <div class="center">
-              <div id="vis1"></div> <!-- This div is where the new Vega chart will render -->
+              <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
             </div>
           </div>
         </div>
@@ -134,8 +134,10 @@
         editor: true   // Open in Vega Editor
       } }).then(function(result) {}).catch(console.error);
 
-      var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/brushing_interaction_3charts.json";
-      vegaEmbed("#vis1", exe1, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+      var spec3 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/brushing_interaction_3charts.json";
+      vegaEmbed('#brushing_interaction_3charts_spec', spec3).then(function(result) {
+        // Access the Vega view instance as result.view
+      }).catch(console.error);
     </script>
 
     <!-- External script for D3 Zoomable Sunburst Chart -->
