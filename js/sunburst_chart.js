@@ -9,7 +9,7 @@ function createSunburstChart(csvUrl, chartContainer) {
       // Set dimensions
       const width = 800;
       const height = 800;
-      const radius = Math.min(width, height) / 6;
+      const radius = Math.min(width, height) / 7;
   
       // Create color scale
       const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, rootData.children.length + 1));
@@ -28,7 +28,7 @@ function createSunburstChart(csvUrl, chartContainer) {
           .attr("width", width)
           .attr("height", height)
           .attr("viewBox", [-width / 2, -height / 2, width, height])
-          .style("font", "16px sans-serif");
+          .style("font", "12px sans-serif");
   
       const g = svg.append("g");
   

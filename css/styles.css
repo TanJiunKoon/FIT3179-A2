@@ -53,6 +53,18 @@
       color: #90ee90;
       }
     
+    .icon {
+      width: 50px; /* Adjust the width of the icon */
+      height: 50px; /* Adjust the height of the icon */
+      margin-right: 20px;
+    }
+
+    .sunburst_radial_icon {
+      width: 55px; /* Adjust the width of the icon */
+      height: 55px; /* Adjust the height of the icon */
+      margin-right: 20px;
+    }
+    
     .heading {
     font-family: 'Roboto Slab', serif;
     font-weight:800;
@@ -70,6 +82,7 @@
     filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
     background: rgb(2, 0, 36);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(235, 255, 250) 100%);
+    display: flex;
     }
     
     .subheading {
