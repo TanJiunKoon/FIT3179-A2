@@ -31,8 +31,8 @@
             <p class="subheading">Which states in Malaysia have the highest and lowest unemployment rates?</p>
             <p class="text columns-1" style="margin-bottom: 2em;">
               The East Malaysian state of Sabah experiences significantly higher unemployment compared to most regions in Peninsular Malaysia.
-              Darker shades of <span style="color:blue;">blue</span> represent higher unemployment rates, while lighter shades indicate lower unemployment rates.<br>
-              Hover your mouse on the node to see the <strong class="fruit">tooltips</strong>.
+              Darker shades of <span style="color:blue;">blue</span> represent higher unemployment rates, while lighter shades indicate lower unemployment rates.<br><br>
+              Hover your mouse on the state to see the <strong class="fruit">tooltips</strong>.
             </p>
           </div>
         </div>
@@ -74,11 +74,19 @@
       <!-- Section for the Vega Brushing Interaction 3 Charts -->
       <div class="heading">
         <img src="img/Paint_brush_icon.png" alt="Icon" class="icon" />
-        <p>Brushing Interaction 3 Charts</p>
+        <p>Interactive Charts</p>
       </div>
 
       <div class="slide">
         <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading">Income Growth by State in Malaysia</p>
+            <p class="text columns-1" style="margin-bottom: 2em;">
+              These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key regions. <br><br>
+              The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific time periods by highlighting them in the upper graph.
+            </p>
+          </div>
+
           <div class="pure-u-24-24">
             <div class="center">
               <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
@@ -152,7 +160,6 @@
       </div>
     </div>
 
-    
     <div id="tooltip" style="position: absolute; visibility: hidden; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px; border-radius: 5px; font-size: 12px;"></div>
 
     <!-- Scripts for Vega visualizations -->

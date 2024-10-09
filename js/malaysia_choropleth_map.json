@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Unemployment Rate in Malaysia (2022)",
+  "title": {
+    "text": "Unemployment Rate in Malaysia (2022)",
+    "fontSize": 16
+  },
   "width": 1500,
   "height": 650,
   "projection": { "type": "equirectangular" },
@@ -8,8 +11,8 @@
     "background": "transparent",
     "axis": {
       "labelFont": "sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 14,
+      "labelFontSize": 16,
+      "titleFontSize": 18,
       "grid": false
     },
     "view": { "stroke": null }
@@ -18,10 +21,7 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_50m_ocean"
-        }
+        "format": { "type": "topojson", "feature": "ne_50m_ocean" }
       },
       "mark": {
         "type": "geoshape",
@@ -33,10 +33,7 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_50m_graticules_5"
-        }
+        "format": { "type": "topojson", "feature": "ne_50m_graticules_5" }
       },
       "mark": {
         "type": "geoshape",
@@ -47,10 +44,7 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_50m_admin_0_countries"
-        }
+        "format": { "type": "topojson", "feature": "ne_50m_admin_0_countries" }
       },
       "mark": {
         "type": "geoshape",
@@ -99,6 +93,11 @@
             "scheme": "blues",
             "domain": [1, 8],
             "reverse": false
+          },
+          "legend": {
+            "title": "Unemployment Rate (%)",
+            "titleFontSize": 14,
+            "labelFontSize": 12
           }
         },
         "tooltip": [
@@ -118,59 +117,6 @@
       "selection": {
         "hover": { "type": "single", "on": "mouseover", "empty": "none" }
       }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/annotations.csv",
-        "format": { "type": "csv" }
-      },
-      "encoding": {
-        "longitude": { "field": "Longitude", "type": "quantitative" },
-        "latitude": { "field": "Latitude", "type": "quantitative" }
-      },
-      "layer": [
-        {
-          "layer": [
-            {
-              "mark": {
-                "type": "point",
-                "size": 600,
-                "shape": "arrow",
-                "color": "#040404",
-                "dy": -100,
-                "strokeWidth": 2,
-                "fill": "#000000"
-              }
-            },
-            {
-              "mark": {
-                "type": "text",
-                "align": "left",
-                "dx": -120,
-                "dy": 25,
-                "fontStyle": "italic",
-                "fontWeight": "bold",
-                "fontSize": 12,
-                "color": "#040404"
-              },
-              "encoding": { "text": { "field": "text_annotation" } }
-            },
-            {
-              "mark": {
-                "type": "text",
-                "align": "left",
-                "dx": -120,
-                "dy": 45,
-                "fontStyle": "italic",
-                "fontWeight": "bold",
-                "fontSize": 12,
-                "color": "#040404"
-              },
-              "encoding": { "text": { "field": "text_annotation2" } }
-            }
-          ]
-        }
-      ]
     }
   ]
 }
