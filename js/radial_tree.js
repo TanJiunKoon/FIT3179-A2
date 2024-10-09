@@ -23,7 +23,7 @@
   "data": [
     {
       "name": "tree",
-      "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/gdp_production_data.json",
+      "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/data.json",
       "transform": [
         { "type": "stratify", "key": "id", "parentKey": "parent" },
         {
