@@ -1,44 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Unemployment Rate in Malaysia (2022)",
-  "width": 1200,
-  "height": 650,
-  "params": [
-    {
-      "name": "center_to",
-      "value": [110, 2],
-      "bind": {
-        "input": "select",
-        "options": [
-          [110, 2],
-          [100.9925, 5.4112],
-          [116.0753, 5.9781]
-        ],
-        "labels": ["Malaysia Center", "Penang", "Sabah"],
-        "name": "Map Center: "
-      }
-    },
-    {
-      "name": "dynamic_zoom",
-      "expr": "center_to[0] === 100.9925 && center_to[1] === 5.4112 ? 9200 : center_to[0] === 116.0753 && center_to[1] === 5.9781 ? 9200 : 3000"
-    },
-    {
-      "name": "zoom_level",
-      "value": 3000,
-      "bind": {
-        "input": "range",
-        "min": 1000,
-        "max": 10000,
-        "step": 100,
-        "name": "Zoom: "
-      }
-    }
-  ],
-  "projection": {
-    "type": "mercator",
-    "center": { "expr": "center_to" },
-    "scale": { "expr": "zoom_level === 3000 ? dynamic_zoom : zoom_level" }
-  },
+  "width": 1000,
+  "height": 600,
+  "projection": { "type": "equirectangular" },
   "config": {
     "background": "transparent",
     "axis": {
@@ -52,7 +17,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/malaysia_states.json",
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
         "format": {
           "type": "topojson",
           "feature": "ne_50m_ocean"
@@ -67,7 +32,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/malaysia_states.json",
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
         "format": {
           "type": "topojson",
           "feature": "ne_50m_graticules_5"
@@ -81,7 +46,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/malaysia_states.json",
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
         "format": {
           "type": "topojson",
           "feature": "ne_50m_admin_0_countries"
@@ -96,7 +61,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/malaysia_states.json",
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/malaysia_states.json",
         "format": { "type": "topojson", "feature": "gadm41_MYS_1" }
       },
       "transform": [
@@ -108,7 +73,7 @@
           "lookup": "state_name",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/Cleaned_Unemployment_Rate_Data.csv",
+              "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/Cleaned_Unemployment_Rate_Data.csv",
               "format": { "type": "csv" },
               "transform": [
                 { "filter": "datum.date == '2022-01-01'" }
@@ -156,7 +121,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/annotations.csv",
+        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-HW10/main/data/annotations.csv",
         "format": { "type": "csv" }
       },
       "encoding": {
