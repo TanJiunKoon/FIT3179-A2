@@ -15,6 +15,13 @@
     width: 3000px;
     height: 4900px;
     }
+
+    .pure-g {
+      display: flex;
+      align-items: center; /* Vertically aligns icon and text */
+      flex-direction: row; /* Ensures items are in a row */
+    }    
+    
     
     body {
     display: flex;
@@ -59,6 +66,12 @@
       margin-right: 20px;
     }
 
+    .small_icon {
+      width: 35px; /* Adjust the width of the icon */
+      height: 35px; /* Adjust the height of the icon */
+      margin-right: 20px;
+    }
+
     .sunburst_radial_icon {
       width: 55px; /* Adjust the width of the icon */
       height: 55px; /* Adjust the height of the icon */
@@ -90,6 +103,7 @@
     font-weight:600;
     font-size: 1.875rem;
     line-height: 2.25rem;
+    display: flex;
     }
     
     .slideshow {

@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,  
   "vconcat": [
     {
       "hconcat": [
@@ -16,35 +17,93 @@
               }
             }
           ],
-          "mark": "area",
-          "encoding": {
-            "x": {
-              "field": "date",
-              "type": "temporal",
-              "axis": { "title": "Date" }
-            },
-            "y": {
-              "field": "income_mean",
-              "type": "quantitative",
-              "aggregate": "sum",
-              "stack": "zero",
-              "axis": { "title": "Total Income" }
-            },
-            "color": {
-              "field": "state",
-              "type": "nominal",
-              "legend": null
-            },
-            "tooltip": [
-              { "field": "state", "type": "nominal" },
-              {
-                "field": "income_mean",
-                "type": "quantitative",
-                "aggregate": "sum",
-                "title": "Total Income"
+          "layer": [
+            {
+              "mark": {
+                "type": "area",
+                "line": true,
+                "color": {
+                  "gradient": "linear",
+                  "x1": 1,
+                  "y1": 1,
+                  "x2": 1,
+                  "y2": 0,
+                  "stops": [
+                    {"offset": 0, "color": "#f7f7f7"},
+                    {"offset": 1, "field": "state", "type": "nominal"}
+                  ]
+                }
+              },
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "temporal",
+                  "axis": { "title": "Date" }
+                },
+                "y": {
+                  "field": "income_mean",
+                  "type": "quantitative",
+                  "aggregate": "sum",
+                  "stack": "zero",
+                  "axis": { "title": "Total Income" }
+                },
+                "color": {
+                  "field": "state",
+                  "type": "nominal",
+                  "legend": null
+                },
+                "tooltip": [
+                  { "field": "state", "type": "nominal" },
+                  {
+                    "field": "income_mean",
+                    "type": "quantitative",
+                    "aggregate": "sum",
+                    "title": "Total Income"
+                  }
+                ]
               }
-            ]
-          }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 5,
+                "dy": -5,
+                "fontSize": 10
+              },
+              "transform": [
+                {
+                  "filter": {
+                    "or": [
+                      {"timeUnit": "year", "field": "date", "equal": 2022}
+                    ]
+                  }
+                }
+              ],
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "income_mean",
+                  "type": "quantitative",
+                  "aggregate": "sum",
+                  "stack": "zero"
+                },
+                "text": {
+                  "field": "income_mean",
+                  "type": "quantitative",
+                  "aggregate": "sum",
+                  "format": ",.0f"
+                },
+                "color": {
+                  "field": "state",
+                  "type": "nominal"
+                }
+              }
+            }
+          ]
         },
         {
           "width": 420,
