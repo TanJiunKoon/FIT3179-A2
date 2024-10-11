@@ -237,4 +237,26 @@
       border-radius: 5px;
       pointer-events: none;
     }
+
+    .small-font-size {
+      font-size: 14px;
+      color: gray;
+      align-items: center; /* Vertically aligns icon and text */
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer a {
+      color: blue;           /* Change link color */
+      font-weight: bold;     /* Make the text bold */
+      text-decoration: underline;  /* Underline the text */
+    }
+    
+    .footer a:hover {
+      color: darkblue;       /* Change color when hovering */
+      text-decoration: none; /* Remove underline when hovering */
+    }
     
