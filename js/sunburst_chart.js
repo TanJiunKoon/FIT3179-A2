@@ -54,7 +54,7 @@ function createSunburstChart(csvUrl, chartContainer) {
         // Handle tooltip display on mouseover
         .on("mouseover", function(event, d) {
           const sequence = d.ancestors().map(d => d.data.name).reverse().join(" > ");
-          const tooltipText = `<strong>${sequence}</strong><br>GDP value: <strong>${d.value}</strong>`;
+          const tooltipText = `GDP Hierarchy: <strong>${sequence}</strong><br>GDP value: <strong>${d.value}</strong>`;
       
           d3.select("#tooltip")
             .html(tooltipText)

@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
           .attr("r", 3)
           .on("mouseover", function(event, d) {
             tooltip.style("visibility", "visible")
-              .html(`<strong>Year:</strong> ${d.year}<br><strong>Net FDI Flows:</strong> ${d.net}<br><strong>GDP per Capita:</strong> ${d.gdp_capita}`)
+              .html(`Year: <strong>${d.year}</strong><br>Net FDI Flows: <strong>${d.net.toFixed(2)}</strong><br>GDP per Capita: <strong>${d.gdp_capita}</strong>`)
               .style("left", (event.pageX + 15) + "px")
               .style("top", (event.pageY - 28) + "px");
           })
