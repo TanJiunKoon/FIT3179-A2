@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Radial Tree Layout of Economic Sectors with Tooltips",
+  "description": "Radial Tree Layout of Economic Sectors",
   "width": 1080,
   "height": 950,
   "padding": 5,
@@ -85,8 +85,7 @@
         "update": {
           "x": {"field": "x"},
           "y": {"field": "y"},
-          "fill": {"scale": "color", "field": "depth"},
-          "tooltip": {"field": "path"}
+          "fill": {"scale": "color", "field": "depth"}
         }
       }
     },
