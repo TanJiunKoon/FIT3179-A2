@@ -46,7 +46,8 @@
           </div>
           <div class="pure-u-12-24 pl-10">
             <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              The <strong>unemployment rate</strong> value provides insight into the economic conditions and job market of each region in Malaysia. </p>
+              The <strong class="blue-text">unemployment rate</strong> value provides insight into the economic conditions and job market of each region in Malaysia.
+            </p>
           </div>
         </div>
 
@@ -71,12 +72,12 @@
         <div class="pure-g">
           <div class="pure-u-12-24">
             <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-              Place holder
+              This bump chart visualizes the ranking of states in Malaysia based on their poverty rates over time.
             </p>
           </div>
           <div class="pure-u-12-24 pl-10">
             <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              Insight holder
+              The data shows the <strong>absolute poverty rate</strong>, which is defined as the proportion of households with a monthly income below the Poverty Line Income (PLI).
             </p>
           </div>
         </div>
@@ -248,7 +249,8 @@
       }).catch(console.error);
 
       var spec4 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/bump_chart.json";
-      vegaEmbed('#bump_chart', spec4).then(function(result) {}).catch(console.error);
+      vegaEmbed('#bump_chart', spec4, { "actions": false }).then(function(result) {}).catch(console.error);
+      
     </script>
 
     <!-- External script for D3 Zoomable Sunburst Chart -->
