@@ -15,6 +15,10 @@
               "filter": {
                 "param": "time_brush"
               }
+            },
+            {
+              "calculate": "'RM ' + format(datum.income_mean, ',.0f')",
+              "as": "formatted_total_income"
             }
           ],
           "layer": [
@@ -48,14 +52,14 @@
                 "x": {
                   "field": "date",
                   "type": "temporal",
-                  "axis": { "title": "Date" }
+                  "axis": { "title": "Date", "labelFontSize": 12 }
                 },
                 "y": {
                   "field": "income_mean",
                   "type": "quantitative",
                   "aggregate": "sum",
                   "stack": "zero",
-                  "axis": { "title": "Total Income" }
+                  "axis": { "title": "Total Income", "titleFontSize": 14, "labelFontSize": 12 }
                 },
                 "color": {
                   "field": "state",
@@ -88,9 +92,8 @@
                   },
                   { "field": "state", "type": "nominal", "title": "State" },
                   {
-                    "field": "income_mean",
-                    "type": "quantitative",
-                    "aggregate": "sum",
+                    "field": "formatted_total_income",
+                    "type": "nominal",
                     "title": "Total Income"
                   }
                 ]
@@ -149,6 +152,7 @@
         {
           "width": 420,
           "height": 400,
+          "title": "Average Income for years selected",
           "data": {
             "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
           },
@@ -163,6 +167,10 @@
                 { "op": "mean", "field": "income_mean", "as": "avg_income" }
               ],
               "groupby": ["state"]
+            },
+            {
+              "calculate": "'RM ' + format(datum.avg_income, ',.2f')",
+              "as": "formatted_avg_income"
             }
           ],
           "layer": [
@@ -215,10 +223,9 @@
                 "tooltip": [
                   { "field": "state", "type": "nominal", "title": "State:" },
                   {
-                    "field": "avg_income",
-                    "type": "quantitative",
-                    "title": "Average Income:",
-                    "format": ".2f"
+                    "field": "formatted_avg_income",
+                    "type": "nominal",
+                    "title": "Average Income:"
                   }
                 ]
               }
@@ -234,7 +241,7 @@
                 "type": "text",
                 "align": "center",
                 "baseline": "middle",
-                "fontSize": 12
+                "fontSize": 14
               },
               "encoding": {
                 "x": { "field": "state", "type": "nominal", "axis": null },
@@ -268,13 +275,13 @@
         "x": {
           "field": "date",
           "type": "temporal",
-          "axis": { "title": "Date" }
+          "axis": { "title": "Date", "labelFontSize": 12 }
         },
         "y": {
           "field": "income_mean",
           "type": "quantitative",
           "aggregate": "mean",
-          "axis": { "title": "Average Income" }
+          "axis": { "title": "Average Income", "titleFontSize": 14, "labelFontSize": 12 }
         }
       }
     }

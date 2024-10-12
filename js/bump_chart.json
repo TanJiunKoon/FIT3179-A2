@@ -38,7 +38,10 @@
     "x": {
       "field": "date",
       "type": "temporal",
-      "axis": {"labelAngle": 0},
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12 
+      },
       "title": "Date"
     },
     "y": {
@@ -48,8 +51,10 @@
       "scale": {"domain": [0.5, {"expr": "Top_n_states+0.5"}]},
       "axis": {
         "labelAngle": 0,
+        "labelFontSize": 12,  
         "tickMinStep": 1,
-        "tickCount": {"expr": "Top_n_states"}
+        "tickCount": {"expr": "Top_n_states"},
+        "titleFontSize": 14  
       },
       "title": "Rank Based on Poverty Rate"
     },
@@ -59,7 +64,7 @@
       {
         "field": "poverty_rate_numeric",
         "type": "quantitative",
-        "title": "AbsolutePoverty Rate (%)",
+        "title": "Absolute Poverty Rate (%)",
         "format": ".2f"
       }
     ]
@@ -84,7 +89,9 @@
           "legend": {
             "orient": "bottom",
             "title": "State",
-            "offset": 5
+            "offset": 5,
+            "titleFontSize": 14,  
+            "labelFontSize": 12   
           }
         },
         "size": {
@@ -122,7 +129,7 @@
       "mark": {
         "type": "text",
         "fontWeight": "bold",
-        "fontSize": 11,
+        "fontSize": 14,  
         "baseline": "bottom",
         "align": "left",
         "dx": 5,
@@ -146,7 +153,7 @@
       "mark": {
         "type": "text",
         "fontWeight": "bold",
-        "fontSize": 11,
+        "fontSize": 14, 
         "baseline": "bottom",
         "align": "left",
         "dx": 5,

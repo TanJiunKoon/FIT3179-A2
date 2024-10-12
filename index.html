@@ -53,12 +53,14 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center" style="margin-bottom: 20px;">
+            <div class="center">
               <div id="choropleth_map_spec"></div>  
             </div>
           </div>
         </div>
-
+      </div> 
+      
+      <div class="slide">
         <!-- Bump Chart -->
         <div class="pure-g">
           <div class="pure-u-24-24">
@@ -84,14 +86,16 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center" style="margin-bottom: 30px;">
+            <div class="center">
               <div id="bump_chart"></div>  
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Interactive Chart -->
-        <div class="pure-g">
+      <div class="slide">
+         <!-- Interactive Chart -->
+         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Paint_brush_icon.png" alt="Icon" class="small_icon" />Income Growth by State in Malaysia</p>
           </div>
@@ -113,18 +117,12 @@
         </div>
 
         <div class="pure-u-24-24">
-          <div class="center" style="margin-bottom: 20px;">
+          <div class="center">
             <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
           </div>
         </div>
-      
 
-      </div>   
-      
-      <!-- <div class="heading">
-        <img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Icon" class="sunburst_radial_icon" />
-        <p>Radial Tree of Malaysia Gross Domestic Product (GDP)</p>
-      </div> -->
+      </div>
 
       <div class="slide">
 
@@ -155,7 +153,9 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="slide">
         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Line_chart_diagram_business_analytics_icon.png" alt="Icon" class="small_icon" />Did Foreign Direct Investment (FDI) have a correlation with Gross Domestic Product (GDP)?</p>
@@ -179,7 +179,7 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center" style="padding-top: 10px; margin-bottom: 20px;">
+            <div class="center" style="padding-top: 10px;">
               <div id="connected_scatterplot_chart"></div> <!-- Scatterplot Chart goes here -->
             </div>
           </div>
@@ -192,7 +192,9 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="slide">
         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Icon" class="small_icon" />Hierarchy of Malaysia's Gross Domestic Product (GDP) by Production Sectors</p>
@@ -224,7 +226,21 @@
 
     </div>
 
-    <div id="tooltip" style="position: absolute; visibility: hidden; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px; border-radius: 5px; font-size: 12px;"></div>
+    <div id="tooltip" style="
+    position: absolute;
+    visibility: hidden;
+    background-color: white;  /* White background like Vega-Lite */
+    color: black;             /* Black text color */
+    padding: 5px 10px;        /* Padding to match Vega-Lite's spacing */
+    border-radius: 3px;       /* Slightly rounded corners */
+    font-size: 13px;          /* Standard font size */
+    font-family: sans-serif;  /* Vega-Lite uses default sans-serif font */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Light border */
+    pointer-events: none; /* So that tooltips don't interfere with mouse events */
+    transition: visibility 0.1s, opacity 0.1s ease-in-out; /* Smooth fade effect */
+    opacity: 0; /* For smooth appearing/disappearing */
+    "></div>
 
     <!-- Scripts for Vega visualizations -->
     <script type="text/javascript">
