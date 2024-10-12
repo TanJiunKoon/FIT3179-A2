@@ -211,6 +211,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       pointer-events: none;
+      z-index: 1000;  /* Make sure the tooltip is above the chart */
     }
 
     .small-font-size {

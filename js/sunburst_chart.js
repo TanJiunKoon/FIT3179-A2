@@ -55,25 +55,25 @@ function createSunburstChart(csvUrl, chartContainer) {
         .on("mouseover", function(event, d) {
           const sequence = d.ancestors().map(d => d.data.name).reverse().join(" > ");
           const tooltipText = `<strong>${sequence}</strong><br>GDP value: <strong>${d.value}</strong>`;
-
+      
           d3.select("#tooltip")
             .html(tooltipText)
             .style("visibility", "visible")
+            .style("opacity", 1)  // Set opacity to 1 for fade-in effect
             .style("top", (event.pageY + 10) + "px")
             .style("left", (event.pageX + 10) + "px");
         })
-        // Update tooltip position as mouse moves
         .on("mousemove", function(event) {
-          d3.select("#tooltip")
-            .style("top", (event.pageY + 10) + "px")
-            .style("left", (event.pageX + 10) + "px");
+            d3.select("#tooltip")
+              .style("top", (event.pageY + 10) + "px")
+              .style("left", (event.pageX + 10) + "px");
         })
-        // Hide the tooltip on mouseout
         .on("mouseout", function() {
-          d3.select("#tooltip")
-            .style("visibility", "hidden");
+            d3.select("#tooltip")
+              .style("visibility", "hidden")
+              .style("opacity", 0);  // Set opacity to 0 for fade-out effect
         });
-
+      
     // Add labels
     const label = g.append("g")
         .attr("pointer-events", "none")
