@@ -21,18 +21,32 @@
       <div id="title" class="center slide mt-10">
         <p class="text-7xl">Do you really know Malaysia Econimics?</p>
       </div>
+
       <div class="slide">
+
         <div class="pure-g">
-          
           <div class="pure-u-24-24">
-            
             <p class="subheading">
               <img src="img/Address_gps_location_map_pin_icon.png" alt="Icon" class="small_icon" />
               Which states in Malaysia have the highest and lowest unemployment rates?
             </p>
-            <p class="text columns-1" style="margin-bottom: 2em;">
+
+            <!-- <p class="text columns-1" style="margin-bottom: 2em;">
               The East Malaysian state of Sabah experiences significantly higher unemployment compared to most regions in Peninsular Malaysia.<br><br>
               Hover your mouse on the state to see the <strong class="fruit">tooltips</strong>.
+            </p> -->
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-12-24">
+            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
+              The East Malaysian state of Sabah experiences significantly higher unemployment compared to most regions in Peninsular Malaysia.              
+            </p>
+          </div>
+          <div class="pure-u-12-24 pl-10">
+            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
+              Insight holder
             </p>
           </div>
         </div>
@@ -44,6 +58,38 @@
             </div>
           </div>
         </div>
+
+        <!-- Bump Chart -->
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading">
+              <img src="img/Ranking_icon.png" alt="Icon" class="small_icon" />
+              Which states in Malaysia have the highest poverty rates?
+            </p>
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-12-24">
+            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
+              Place holder
+            </p>
+          </div>
+          <div class="pure-u-12-24 pl-10">
+            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
+              Insight holder
+            </p>
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <div class="center">
+              <div id="bump_chart"></div>  
+            </div>
+          </div>
+        </div>
+
       </div>   
       
       <!-- <div class="heading">
@@ -87,11 +133,41 @@
           </div>
 
           <div class="pure-u-24-24">
-            <div class="center">
+            <div class="center" style="margin-bottom: 20px;">
               <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
             </div>
           </div>
         </div>
+
+        <div class="pure-g">
+          <div class="pure-u-24-24"> 
+            <p class="subheading">Tree Cover Loss in Malaysia</p>
+          </div>
+
+          <div class="pure-g">
+            <div class="pure-u-12-24">
+              <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
+                Clearing land for plantations can lead to deforestation. The majority of Malaysian plantations are 
+                <strong class="palm">oil palm</strong>, with secondary crops such as 
+                <strong class="rubber">rubber</strong>, <strong class="fruit">fruit</strong>, and <strong class="timber">timber</strong>.
+              </p>
+            </div>
+            <div class="pure-u-12-24 pl-10">
+              <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
+                Outside of <strong class="palm">oil palm</strong>, northern states such as Kelantan and Kedah have the highest proportion of <strong class="rubber">rubber</strong> plantations.
+                Smaller states such as Perlis and Negeri Sembilan produce more <strong class="fruit">fruit</strong>, while Sabah and Sarawak have more <strong class="timber">timber</strong> plantations.
+                Hover over the bars to see the actual values.
+              </p>
+            </div>
+          </div>
+          
+          <div class="pure-u-24-24">
+            <div class="center">
+            <div id="symbol_map_spec"></div>  
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Section for the Sunburst Chart -->
@@ -128,14 +204,24 @@
       </div>   -->
 
       <div class="slide">
-
+        
         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Line_chart_diagram_business_analytics_icon.png" alt="Icon" class="small_icon" />Did Foreign Direct Investment (FDI) have a correlation with Gross Domestic Product (GDP)?</p>
-            <p class="text columns-1" style="margin-bottom: 2em;">
-              This animated connected scatterplot chart visualizes the relationship between Malaysia's Net Foreign Direct Investment (FDI) flows and Gross Domestic Product (GDP) per capita from 2008 to 2023.<br>
-              While the chart shows some correlation, the fluctuations suggest that the relationship between FDI and GDP per capita is influenced by multiple factors.   <br><br>           
-              You have the ability to <strong class="fruit">replay animation</strong> again.
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-12-24">
+              <p class="text columns-1 pr-5" style="margin-bottom: 0.1em;">
+                This animated connected scatterplot chart visualizes the relationship between Malaysia's Net Foreign Direct Investment (FDI) flows and Gross Domestic Product (GDP) per capita from 2008 to 2023.
+              </p>
+          </div>
+          <div class="pure-u-12-24 pl-10">
+            <p class="text columns-1 pr-10" style="margin-bottom: 0.1em;">
+              Outside of <strong class="palm">oil palm</strong>, northern states such as Kelantan and Kedah have the highest proportion of <strong class="rubber">rubber</strong> plantations.
+              Smaller states such as Perlis and Negeri Sembilan produce more <strong class="fruit">fruit</strong>, while Sabah and Sarawak have more <strong class="timber">timber</strong> plantations.
+              Hover over the bars to see the actual values.
             </p>
           </div>
         </div>
@@ -159,9 +245,14 @@
 
       <div class="footer small-font-size">
         <p>
-          Tan Jiun Koon, 10/10/2024. Data from 
-          <a href="https://data.gov.my/data-catalogue" target="_blank">data.gov.my</a>. Source code on
-          <a href="https://github.com/TanJiunKoon/FIT3179-A2" target="_blank">GitHub</a>.
+          Tan Jiun Koon, my source code on <a href="https://github.com/TanJiunKoon/FIT3179-A2" target="_blank">GitHub</a>.  
+          13/10/2024.  <br> 
+          Source: <a href="https://data.gov.my/data-catalogue/lfs_state_sex" target="_blank">lfs_state_sexe</a>, Author: Government of Malaysia, Date: 09 Feb 2024<br> 
+          Source: <a href="https://data.gov.my/data-catalogue/hh_poverty_state" target="_blank">hh_poverty_state</a>, Author: Government of Malaysia, Date: 28 Jul 2023<br> 
+          Source: <a href="https://data.gov.my/data-catalogue/hh_income_state" target="_blank">hh_income_state</a>, Author: Government of Malaysia, Date: 28 Jul 2023<br> 
+          Source: <a href="https://data.gov.my/data-catalogue/fdi_flows" target="_blank">fdi_flows</a>, Author: Government of Malaysia, Date: 16 Aug 2024<br> 
+          Source: <a href="https://data.gov.my/data-catalogue/gdp_annual_nominal_supply_granular" target="_blank">gdp_annual_nominal_supply_granular</a>, Author: Government of Malaysia, Date: 17 May 2024<br> 
+          Source: <a href="https://data.gov.my/data-catalogue/gdp_gni_annual_real" target="_blank">gdp_gni_annual_real</a>, Author: Government of Malaysia, Date: 17 May 2024<br> 
         </p>
       </div>      
 
@@ -191,6 +282,9 @@
       vegaEmbed('#brushing_interaction_3charts_spec', spec3).then(function(result) {
         // Access the Vega view instance as result.view
       }).catch(console.error);
+
+      var spec4 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/bump_chart.json";
+      vegaEmbed('#bump_chart', spec4).then(function(result) {}).catch(console.error);
     </script>
 
     <!-- External script for D3 Zoomable Sunburst Chart -->
