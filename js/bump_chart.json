@@ -54,12 +54,12 @@
       "title": "Rank Based on Poverty Rate"
     },
     "tooltip": [
-      {"field": "state", "type": "nominal", "title": "State:"},
-      {"field": "date", "type": "temporal", "title": "Date:"},
+      {"field": "state", "type": "nominal", "title": "State"},
+      {"field": "date", "type": "temporal", "title": "Date"},
       {
         "field": "poverty_rate_numeric",
         "type": "quantitative",
-        "title": "AbsolutePoverty Rate (%):",
+        "title": "AbsolutePoverty Rate (%)",
         "format": ".2f"
       }
     ]

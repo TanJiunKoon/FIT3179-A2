@@ -77,7 +77,7 @@
           </div>
           <div class="pure-u-12-24 pl-10">
             <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              The data shows the <strong>absolute poverty rate</strong>, which is defined as the proportion of households with a monthly income below the Poverty Line Income (PLI).
+              The data shows the <strong>absolute poverty rate</strong>, which is defined as the proportion of households with a monthly income below the Poverty Line.
             </p>
           </div>
         </div>
@@ -95,27 +95,29 @@
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Paint_brush_icon.png" alt="Icon" class="small_icon" />Income Growth by State in Malaysia</p>
           </div>
+        </div>
 
-          <div class="pure-g">
-            <div class="pure-u-12-24">
-              <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-                These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key regions. <br><br>
-                The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific time periods by highlighting them in the upper graph.
-              </p>
-            </div>
-            <div class="pure-u-12-24 pl-10">
-              <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-                Insight holder
-              </p>
-            </div>
+        <div class="pure-g">
+          <div class="pure-u-12-24">
+            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
+              These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key regions. <br><br>
+              The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific time periods by highlighting them in the upper graph.
+            </p>
           </div>
-
-          <div class="pure-u-24-24">
-            <div class="center" style="margin-bottom: 20px;">
-              <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
-            </div>
+          <div class="pure-u-12-24 pl-10">
+            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
+              The <strong> Total Income</strong> represents the sum of all household incomes across various states in Malaysia. <br><br>
+              The <strong> Average Income</strong> is the gross monthly household income averaged across households in each state.
+            </p>
           </div>
         </div>
+
+        <div class="pure-u-24-24">
+          <div class="center" style="margin-bottom: 20px;">
+            <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
+          </div>
+        </div>
+      
 
       </div>   
       
@@ -135,13 +137,13 @@
         <div class="pure-g">
           <div class="pure-u-12-24">
             <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-              This interactive sunburst chart represents Malaysia's Gross Domestic Product (GDP) breakdown by production sectors.  <br><br>
+              This interactive sunburst chart represents Malaysia's Gross Domestic Product (GDP) breakdown by production sectors in 2023.  <br><br>
               You have the ability to <strong class="fruit">zoom in</strong> and explore each sector's subcategories in detail.
             </p>
           </div>
           <div class="pure-u-12-24 pl-10">
             <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              Insight holder
+              <strong>Gross Domestic Product (GDP) </strong> represents the total value of goods and services produced within a specific year, accounting for the costs incurred during production but not considering the depreciation of capital assets (fixed capital).
             </p>
           </div>
         </div>
@@ -163,14 +165,14 @@
         <div class="pure-g">
           <div class="pure-u-12-24">
               <p class="text columns-1 pr-5" style="margin-bottom: 0.1em;">
-                This animated connected scatterplot chart visualizes the relationship between Malaysia's Net Foreign Direct Investment (FDI) flows and Gross Domestic Product (GDP) per capita from 2008 to 2023.
+                This animated connected scatterplot chart visualizes the relationship between Malaysia's Net Foreign Direct Investment (FDI) flows and Gross Domestic Product (GDP) per capita from 2008 to 2023.<br><br>
+                You have the ability to <strong class="fruit">replay animation</strong> again.
               </p>
           </div>
           <div class="pure-u-12-24 pl-10">
             <p class="text columns-1 pr-10" style="margin-bottom: 0.1em;">
-              Outside of <strong class="palm">oil palm</strong>, northern states such as Kelantan and Kedah have the highest proportion of <strong class="rubber">rubber</strong> plantations.
-              Smaller states such as Perlis and Negeri Sembilan produce more <strong class="fruit">fruit</strong>, while Sabah and Sarawak have more <strong class="timber">timber</strong> plantations.
-              Hover over the bars to see the actual values.
+              <strong>Foreign Direct Investment (FDI) </strong> into Malaysia refers to investments made by non-residents that indicate long-term interests in the country's economy.<br><br>
+              The <strong> Net FDI Flows </strong> represented here are the difference between FDI inflows and outflows
             </p>
           </div>
         </div>
@@ -195,8 +197,7 @@
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Icon" class="small_icon" />Hierarchy of Malaysia's Gross Domestic Product (GDP) by Production Sectors</p>
             <p class="text columns-1" style="margin-bottom: 2em;">
-              This radial tree diagram illustrates the hierarchy of Malaysia’s Gross Domestic Product (GDP) by various production sectors. <br><br>
-              Hover your mouse on the node to see the <strong class="fruit">tooltips</strong>.
+              This radial tree diagram illustrates the detailed hierarchy of Malaysia’s Gross Domestic Product (GDP) by various production sectors. 
             </p>
           </div>
           
@@ -249,7 +250,7 @@
       }).catch(console.error);
 
       var spec4 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/bump_chart.json";
-      vegaEmbed('#bump_chart', spec4, { "actions": false }).then(function(result) {}).catch(console.error);
+      vegaEmbed('#bump_chart', spec4).then(function(result) {}).catch(console.error);
       
     </script>
 

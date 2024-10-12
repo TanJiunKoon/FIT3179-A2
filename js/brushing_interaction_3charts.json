@@ -60,14 +60,14 @@
                     "field": "date",
                     "type": "temporal",
                     "timeUnit": "year",
-                    "title": "Year:"
+                    "title": "Year"
                   },
-                  { "field": "state", "type": "nominal", "title": "State:" },
+                  { "field": "state", "type": "nominal", "title": "State" },
                   {
                     "field": "income_mean",
                     "type": "quantitative",
                     "aggregate": "sum",
-                    "title": "Total Income:"
+                    "title": "Total Income"
                   }
                 ]
               }
