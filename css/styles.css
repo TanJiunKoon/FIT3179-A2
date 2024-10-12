@@ -10,49 +10,15 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(235, 255, 250) 100%);
     }
     
-    #bg {
-    position: relative;
-    width: 3000px;
-    height: 4900px;
-    }
-    
     body {
     display: flex;
     justify-content: center;
     }
     
-    .palm{
-      color: #FFD700
-    }
-    
-    .rubber{
-      color: #ff892e
-    }
-    
     .fruit{
       color: #FF0000
     }
-    
-    .timber{
-    color: #964B00;
-    }
 
-    .disturb{
-      color: #ffc966;
-      }
-    
-    .loss{
-      color: #ffb6c1;
-      }
-
-    .dense{
-      color: #006400;
-      }
-    
-    .notdense{
-      color: #90ee90;
-      }
-    
     .heading {
     font-family: 'Roboto Slab', serif;
     font-weight:800;
@@ -121,72 +87,9 @@
     justify-content: center;
     }
     
-    #temp {
-    position: relative;
-    z-index: 0;
-    }
-    
-    #temp_overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    padding-right: 70px;
-    }
-    
-    #wind {
-    position: relative;
-    z-index: 0;
-    }
-    
-    #wind_overlay {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    padding-right: 20px;
-    padding-bottom: 220px;
-    }
-    
-    #south_pole_clip {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    }
-    
     .buttons .vega-bindings {
     columns: 3;
     padding: 10px;
-    }
-    
-    #diet_streamgraph_interactive .vega-bindings {
-    padding: 10px;
-    }
-    
-    #diet_all_dotmap {
-    height: 275px;
-    }
-    
-    #diet_dotmap {
-    position: relative;
-    width: 1050px;
-    height: 630px;
-    }
-    
-    #dotmap_legend {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: white;
-    width: 100px;
-    height: 80px;
-    border-radius: 0.5rem;
-    margin: 15px;
-    }
-    
-    #dotmap {
-    background: #C8EAFD;
     }
 
     .vega-bindings input[type="select"] {
