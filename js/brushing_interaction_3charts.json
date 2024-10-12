@@ -19,6 +19,16 @@
           ],
           "layer": [
             {
+              "params": [
+                {
+                  "name": "hover",
+                  "select": {
+                    "type": "point",
+                    "on": "mouseover",
+                    "fields": ["state"]
+                  }
+                }
+              ],
               "mark": {
                 "type": "area",
                 "line": true,
@@ -29,8 +39,8 @@
                   "x2": 1,
                   "y2": 0,
                   "stops": [
-                    {"offset": 0, "color": "#f7f7f7"},
-                    {"offset": 1, "field": "state", "type": "nominal"}
+                    { "offset": 0, "color": "#f7f7f7" },
+                    { "offset": 1, "field": "state", "type": "nominal" }
                   ]
                 }
               },
@@ -51,9 +61,23 @@
                   "field": "state",
                   "type": "nominal",
                   "scale": {
-                    "range": ["#1f77b4", "#ff7f0e", "#8c564b", "#9467bd", "#2ca02c", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
+                    "range": [
+                      "#1f77b4",
+                      "#ff7f0e",
+                      "#8c564b",
+                      "#9467bd",
+                      "#2ca02c",
+                      "#e377c2",
+                      "#7f7f7f",
+                      "#bcbd22",
+                      "#17becf"
+                    ]
                   },
                   "legend": null
+                },
+                "fillOpacity": {
+                  "condition": { "param": "hover", "value": 0.5 },
+                  "value": 1
                 },
                 "tooltip": [
                   {
@@ -83,17 +107,12 @@
               "transform": [
                 {
                   "filter": {
-                    "or": [
-                      {"timeUnit": "year", "field": "date", "equal": 2022}
-                    ]
+                    "or": [{ "timeUnit": "year", "field": "date", "equal": 2022 }]
                   }
                 }
               ],
               "encoding": {
-                "x": {
-                  "field": "date",
-                  "type": "temporal"
-                },
+                "x": { "field": "date", "type": "temporal" },
                 "y": {
                   "field": "income_mean",
                   "type": "quantitative",
@@ -110,7 +129,17 @@
                   "field": "state",
                   "type": "nominal",
                   "scale": {
-                    "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
+                    "range": [
+                      "#1f77b4",
+                      "#ff7f0e",
+                      "#2ca02c",
+                      "#9467bd",
+                      "#8c564b",
+                      "#e377c2",
+                      "#7f7f7f",
+                      "#bcbd22",
+                      "#17becf"
+                    ]
                   }
                 }
               }
@@ -131,17 +160,23 @@
             },
             {
               "aggregate": [
-                {
-                  "op": "mean",
-                  "field": "income_mean",
-                  "as": "avg_income"
-                }
+                { "op": "mean", "field": "income_mean", "as": "avg_income" }
               ],
               "groupby": ["state"]
             }
           ],
           "layer": [
             {
+              "params": [
+                {
+                  "name": "hover",
+                  "select": {
+                    "type": "point",
+                    "on": "mouseover",
+                    "fields": ["state"]
+                  }
+                }
+              ],
               "mark": {
                 "type": "circle",
                 "opacity": 0.8
@@ -153,27 +188,48 @@
                   "field": "avg_income",
                   "type": "quantitative",
                   "scale": { "range": [1000, 10000] },
-                  "legend": null 
+                  "legend": null
                 },
                 "color": {
                   "field": "state",
                   "type": "nominal",
                   "scale": {
-                    "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
+                    "range": [
+                      "#1f77b4",
+                      "#ff7f0e",
+                      "#2ca02c",
+                      "#9467bd",
+                      "#8c564b",
+                      "#e377c2",
+                      "#7f7f7f",
+                      "#bcbd22",
+                      "#17becf"
+                    ]
                   },
                   "legend": null
+                },
+                "fillOpacity": {
+                  "condition": { "param": "hover", "value": 0.5 },
+                  "value": 1
                 },
                 "tooltip": [
                   { "field": "state", "type": "nominal", "title": "State:" },
                   {
                     "field": "avg_income",
                     "type": "quantitative",
-                    "title": "Average Income:"
+                    "title": "Average Income:",
+                    "format": ".2f"
                   }
                 ]
               }
             },
             {
+              "transform": [
+                {
+                  "calculate": "datum.state",
+                  "as": "label"
+                }
+              ],
               "mark": {
                 "type": "text",
                 "align": "center",
@@ -183,7 +239,7 @@
               "encoding": {
                 "x": { "field": "state", "type": "nominal", "axis": null },
                 "y": { "field": "state", "type": "nominal", "axis": null },
-                "text": { "field": "state", "type": "nominal" },
+                "text": { "field": "label", "type": "nominal" },
                 "color": { "value": "black" }
               }
             }
@@ -201,7 +257,7 @@
       "data": {
         "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
       },
-      "mark": { "type": "line", "color": "black" }, 
+      "mark": { "type": "line", "color": "black" },
       "params": [
         {
           "name": "time_brush",
