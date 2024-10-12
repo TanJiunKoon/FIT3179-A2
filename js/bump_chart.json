@@ -37,24 +37,24 @@
   "encoding": {
     "x": {
       "field": "date",
-      "timeUnit": "year",  // Display only the year
+      "timeUnit": "year",
       "type": "temporal",
       "axis": {
         "labelAngle": 0,
         "labelFontSize": 12,
-        "title": "Year"  // Update title to Year
+        "title": "Year"
       }
     },
     "y": {
       "field": "rank",
       "type": "quantitative",
       "sort": "descending",
-      "scale": {"domain": [0.5, {"expr": "Top_n_states+0.5"}]},
+      "scale": {"domain": [0.5, {"signal": "Top_n_states + 0.5"}]},
       "axis": {
         "labelAngle": 0,
         "labelFontSize": 12,  
         "tickMinStep": 1,
-        "tickCount": {"expr": "Top_n_states"},
+        "tickCount": {"signal": "Top_n_states"},
         "titleFontSize": 14  
       },
       "title": "Rank Based on Poverty Rate"
@@ -63,9 +63,9 @@
       {"field": "state", "type": "nominal", "title": "State"},
       {
         "field": "date",
-        "timeUnit": "year",  // Extract only the year for the tooltip
+        "timeUnit": "year",
         "type": "temporal",
-        "title": "Year"  // Update tooltip label to Year
+        "title": "Year"
       },
       {
         "field": "poverty_rate_numeric",
