@@ -19,7 +19,7 @@
   <body>
     <div class="slideshow">
       <div id="title" class="center slide mt-10">
-        <p class="text-7xl">Do you really know Malaysia Econimics?</p>
+        <p class="text-7xl">Do you really know Malaysia Economics?</p>
       </div>
 
       <div class="slide">
@@ -53,7 +53,7 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center">
+            <div class="center" style="margin-bottom: 20px;">
               <div id="choropleth_map_spec"></div>  
             </div>
           </div>
@@ -84,8 +84,35 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center">
+            <div class="center" style="margin-bottom: 30px;">
               <div id="bump_chart"></div>  
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Chart -->
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading"><img src="img/Paint_brush_icon.png" alt="Icon" class="small_icon" />Income Growth by State in Malaysia</p>
+          </div>
+
+          <div class="pure-g">
+            <div class="pure-u-12-24">
+              <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
+                These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key regions. <br><br>
+                The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific time periods by highlighting them in the upper graph.
+              </p>
+            </div>
+            <div class="pure-u-12-24 pl-10">
+              <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
+                Insight holder
+              </p>
+            </div>
+          </div>
+
+          <div class="pure-u-24-24">
+            <div class="center" style="margin-bottom: 20px;">
+              <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
             </div>
           </div>
         </div>
@@ -101,89 +128,20 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <p class="subheading"><img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Icon" class="small_icon" />Hierarchy of Malaysia's Gross Domestic Product (GDP) by Production Sectors</p>
-            <p class="text columns-1" style="margin-bottom: 2em;">
-              This radial tree diagram illustrates the hierarchy of Malaysia’s Gross Domestic Product (GDP) by various production sectors. <br><br>
-              Hover your mouse on the node to see the <strong class="fruit">tooltips</strong>.
-            </p>
-          </div>
-          
-          <div class="pure-u-24-24">
-            <div class="center">
-              <div id="radial_tree_spec"></div>  
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section for the Vega Brushing Interaction 3 Charts -->
-      <!-- <div class="heading">
-        <img src="img/Paint_brush_icon.png" alt="Icon" class="icon" />
-        <p>Interactive Charts</p>
-      </div> -->
-
-      <div class="slide">
-        <div class="pure-g">
-          <div class="pure-u-24-24">
-            <p class="subheading"><img src="img/Paint_brush_icon.png" alt="Icon" class="small_icon" />Income Growth by State in Malaysia</p>
-            <p class="text columns-1" style="margin-bottom: 2em;">
-              These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key regions. <br><br>
-              The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific time periods by highlighting them in the upper graph.
-            </p>
-          </div>
-
-          <div class="pure-u-24-24">
-            <div class="center" style="margin-bottom: 20px;">
-              <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
-            </div>
-          </div>
-        </div>
-
-        <div class="pure-g">
-          <div class="pure-u-24-24"> 
-            <p class="subheading">Tree Cover Loss in Malaysia</p>
-          </div>
-
-          <div class="pure-g">
-            <div class="pure-u-12-24">
-              <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-                Clearing land for plantations can lead to deforestation. The majority of Malaysian plantations are 
-                <strong class="palm">oil palm</strong>, with secondary crops such as 
-                <strong class="rubber">rubber</strong>, <strong class="fruit">fruit</strong>, and <strong class="timber">timber</strong>.
-              </p>
-            </div>
-            <div class="pure-u-12-24 pl-10">
-              <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-                Outside of <strong class="palm">oil palm</strong>, northern states such as Kelantan and Kedah have the highest proportion of <strong class="rubber">rubber</strong> plantations.
-                Smaller states such as Perlis and Negeri Sembilan produce more <strong class="fruit">fruit</strong>, while Sabah and Sarawak have more <strong class="timber">timber</strong> plantations.
-                Hover over the bars to see the actual values.
-              </p>
-            </div>
-          </div>
-          
-          <div class="pure-u-24-24">
-            <div class="center">
-            <div id="symbol_map_spec"></div>  
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Section for the Sunburst Chart -->
-      <!-- <div class="heading">
-        <img src="img/Sunburst_chart_hierarchy_data_visualization_icon.png" alt="Icon" class="sunburst_radial_icon" />
-        <p>Zoomable Sunburst Chart</p>
-      </div>   -->
-
-      <div class="slide">
-
-        <div class="pure-g">
-          <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Sunburst_chart_hierarchy_data_visualization_icon.png" alt="Icon" class="small_icon" />What are the production sectors that contribute the most to Malaysia's Gross Domestic Product (GDP)? </p>
-            <p class="text columns-1" style="margin-bottom: 2em;">
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-12-24">
+            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
               This interactive sunburst chart represents Malaysia's Gross Domestic Product (GDP) breakdown by production sectors.  <br><br>
               You have the ability to <strong class="fruit">zoom in</strong> and explore each sector's subcategories in detail.
+            </p>
+          </div>
+          <div class="pure-u-12-24 pl-10">
+            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
+              Insight holder
             </p>
           </div>
         </div>
@@ -195,16 +153,7 @@
             </div>
           </div>
         </div>
-      </div> 
-      
-      <!-- Connected Scatterplot -->
-      <!-- <div class="heading">
-        <img src="img/Line_chart_diagram_business_analytics_icon.png" alt="Icon" class="icon" />
-        <p>Animated Connected Scatterplot Chart</p>
-      </div>   -->
 
-      <div class="slide">
-        
         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading"><img src="img/Line_chart_diagram_business_analytics_icon.png" alt="Icon" class="small_icon" />Did Foreign Direct Investment (FDI) have a correlation with Gross Domestic Product (GDP)?</p>
@@ -228,7 +177,7 @@
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center">
+            <div class="center" style="padding-top: 10px; margin-bottom: 20px;">
               <div id="connected_scatterplot_chart"></div> <!-- Scatterplot Chart goes here -->
             </div>
           </div>
@@ -238,6 +187,22 @@
               <button id="replay-button" style="margin-top: 20px; padding: 5px 10px; font-size: 12px; background-color: #d3d3d3; border: 1px solid #888; color: black; cursor: pointer;">
                 Replay Animation
               </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-24-24">
+            <p class="subheading"><img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Icon" class="small_icon" />Hierarchy of Malaysia's Gross Domestic Product (GDP) by Production Sectors</p>
+            <p class="text columns-1" style="margin-bottom: 2em;">
+              This radial tree diagram illustrates the hierarchy of Malaysia’s Gross Domestic Product (GDP) by various production sectors. <br><br>
+              Hover your mouse on the node to see the <strong class="fruit">tooltips</strong>.
+            </p>
+          </div>
+          
+          <div class="pure-u-24-24">
+            <div class="center">
+              <div id="radial_tree_spec"></div>  
             </div>
           </div>
         </div>
