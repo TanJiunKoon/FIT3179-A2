@@ -37,12 +37,13 @@
   "encoding": {
     "x": {
       "field": "date",
+      "timeUnit": "year",  // Display only the year
       "type": "temporal",
       "axis": {
         "labelAngle": 0,
-        "labelFontSize": 12 
-      },
-      "title": "Date"
+        "labelFontSize": 12,
+        "title": "Year"  // Update title to Year
+      }
     },
     "y": {
       "field": "rank",
@@ -60,7 +61,12 @@
     },
     "tooltip": [
       {"field": "state", "type": "nominal", "title": "State"},
-      {"field": "date", "type": "temporal", "title": "Date"},
+      {
+        "field": "date",
+        "timeUnit": "year",  // Extract only the year for the tooltip
+        "type": "temporal",
+        "title": "Year"  // Update tooltip label to Year
+      },
       {
         "field": "poverty_rate_numeric",
         "type": "quantitative",
