@@ -1,170 +1,169 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1205,
-    "height": 450,
-    "data": {
-      "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/Cleaned_Poverty_Data.csv",
-      "format": {"type": "csv"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1205,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/Cleaned_Poverty_Data.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "Top_n_states",
+      "value": 5,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "name": "Top States Displayed: "
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "toNumber(datum.poverty_absolute)", "as": "poverty_rate_numeric"},
+    {"filter": "isFinite(datum.poverty_rate_numeric)"},
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "poverty_rate_numeric", "order": "descending"}],
+      "groupby": ["date"]
     },
-    "params": [
-      {
-        "name": "Top_n_states",
-        "value": 5,
-        "bind": {
-          "input": "range",
-          "min": 1,
-          "max": 10,
-          "step": 1,
-          "name": "Top States Displayed: "
-        }
-      }
-    ],
-    "transform": [
-      {"calculate": "toNumber(datum.poverty_absolute)", "as": "poverty_rate_numeric"},
-      {"filter": "isFinite(datum.poverty_rate_numeric)"},
-      {
-        "window": [{"op": "rank", "as": "rank"}],
-        "sort": [{"field": "poverty_rate_numeric", "order": "descending"}],
-        "groupby": ["date"]
+    {"filter": "datum.rank <= Top_n_states"},
+    {
+      "calculate": "indexof(['Sabah', 'Kelantan', 'Sarawak', 'Kedah', 'Perak'], datum.state) >= 0 ? datum.state : 'Others'",
+      "as": "state_highlight"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"labelAngle": 0},
+      "title": "Date"
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "sort": "descending",
+      "scale": {"domain": [0.5, {"expr": "Top_n_states+0.5"}]},
+      "axis": {
+        "labelAngle": 0,
+        "tickMinStep": 1,
+        "tickCount": {"expr": "Top_n_states"}
       },
-      {"filter": "datum.rank <= Top_n_states"},
+      "title": "Rank Based on Poverty Rate"
+    },
+    "tooltip": [
+      {"field": "state", "type": "nominal", "title": "State:"},
+      {"field": "date", "type": "temporal", "title": "Date:"},
       {
-        "calculate": "indexof(['Sabah', 'Kelantan', 'Sarawak', 'Kedah', 'Perak'], datum.state) >= 0 ? datum.state : 'Others'",
-        "as": "state_highlight"
-      }
-    ],
-    "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {"labelAngle": 0},
-        "title": "Date"
-      },
-      "y": {
-        "field": "rank",
+        "field": "poverty_rate_numeric",
         "type": "quantitative",
-        "sort": "descending",
-        "scale": {"domain": [0.5, {"expr": "Top_n_states+0.5"}]},
-        "axis": {
-          "labelAngle": 0,
-          "tickMinStep": 1,
-          "tickCount": {"expr": "Top_n_states"}
-        },
-        "title": "Rank Based on Poverty Rate"
-      },
-      "tooltip": [
-        {"field": "state", "type": "nominal", "title": "State:"},
-        {"field": "date", "type": "temporal", "title": "Date:"},
-        {
-          "field": "poverty_rate_numeric",
-          "type": "quantitative",
-          "title": "Absolute Poverty Rate (%):",
-          "format": ".2f"
-        }
-      ]
-    },
-    "layer": [
-      {
-        "mark": {"type": "line", "interpolate": "monotone"},
-        "encoding": {
-          "color": {
-            "field": "state_highlight",
-            "scale": {
-              "domain": ["Sabah", "Kelantan", "Sarawak", "Kedah", "Perak", "Others"],
-              "range": [
-                "#542788",
-                "#8073ac",
-                "#fdb863",
-                "#e08214",
-                "#b35806",
-                "lightgray"
-              ]
-            },
-            "legend": {
-              "orient": "bottom",
-              "title": "State",
-              "offset": 5
-            }
-          },
-          "size": {
-            "condition": {"param": "sel_state", "empty": false, "value": 5},
-            "value": 1
-          }
-        }
-      },
-      {
-        "params": [
-          {
-            "name": "sel_state",
-            "select": {
-              "type": "point",
-              "on": "click",
-              "fields": ["state"]
-            },
-            "bind": "legend"
-          }
-        ],
-        "mark": {"type": "tick", "thickness": 5},
-        "encoding": {
-          "color": {
-            "condition": {
-              "param": "sel_state",
-              "empty": false,
-              "value": "darkgrey"
-            },
-            "field": "state",
-            "title": "State"
-          }
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "fontWeight": "bold",
-          "fontSize": 11,
-          "baseline": "bottom",
-          "align": "left",
-          "dx": 5,
-          "dy": -7
-        },
-        "encoding": {
-          "text": {
-            "value": "Sabah consistently had the highest poverty rate in recent years"
-          },
-          "color": {"value": "#542788"},
-          "opacity": {
-            "condition": {
-              "test": "datum['state'] == 'Sabah' && year(datum.date) == 2019",
-              "value": 1
-            },
-            "value": 0
-          }
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "fontWeight": "bold",
-          "fontSize": 11,
-          "baseline": "bottom",
-          "align": "left",
-          "dx": 5,
-          "dy": -8
-        },
-        "encoding": {
-          "text": {
-            "value": "Kelantan experienced significant poverty increase in 2019"
-          },
-          "color": {"value": "#8073ac"},
-          "opacity": {
-            "condition": {
-              "test": "datum['state'] == 'Kelantan' && year(datum.date) == 2019",
-              "value": 1
-            },
-            "value": 0
-          }
-        }
+        "title": "AbsolutePoverty Rate (%):",
+        "format": ".2f"
       }
     ]
-  }
-  
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "interpolate": "monotone"},
+      "encoding": {
+        "color": {
+          "field": "state_highlight",
+          "scale": {
+            "domain": ["Sabah", "Kelantan", "Sarawak", "Kedah", "Perak", "Others"],
+            "range": [
+              "#542788",
+              "#8073ac",
+              "#fdb863",
+              "#e08214",
+              "#b35806",
+              "lightgray"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": "State",
+            "offset": 5
+          }
+        },
+        "size": {
+          "condition": {"param": "sel_state", "empty": false, "value": 5},
+          "value": 1
+        }
+      }
+    },
+    {
+      "params": [
+        {
+          "name": "sel_state",
+          "select": {
+            "type": "point",
+            "on": "click",
+            "fields": ["state"]
+          },
+          "bind": "legend"
+        }
+      ],
+      "mark": {"type": "tick", "thickness": 5},
+      "encoding": {
+        "color": {
+          "condition": {
+            "param": "sel_state",
+            "empty": false,
+            "value": "darkgrey"
+          },
+          "field": "state",
+          "title": "State"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 11,
+        "baseline": "bottom",
+        "align": "left",
+        "dx": 5,
+        "dy": -7
+      },
+      "encoding": {
+        "text": {
+          "value": "Sabah consistently had the highest poverty rate in recent years"
+        },
+        "color": {"value": "#542788"},
+        "opacity": {
+          "condition": {
+            "test": "datum['state'] == 'Sabah' && year(datum.date) == 2019",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 11,
+        "baseline": "bottom",
+        "align": "left",
+        "dx": 5,
+        "dy": -8
+      },
+      "encoding": {
+        "text": {
+          "value": "Kelantan experienced significant poverty increase in 2019"
+        },
+        "color": {"value": "#8073ac"},
+        "opacity": {
+          "condition": {
+            "test": "datum['state'] == 'Kelantan' && year(datum.date) == 2019",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ]
+}

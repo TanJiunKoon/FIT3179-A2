@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "background": null, 
+  "background": null,
   "vconcat": [
     {
       "hconcat": [
@@ -50,6 +50,9 @@
                 "color": {
                   "field": "state",
                   "type": "nominal",
+                  "scale": {
+                    "range": ["#1f77b4", "#ff7f0e", "#8c564b", "#9467bd", "#2ca02c", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]  
+                  },
                   "legend": null
                 },
                 "tooltip": [
@@ -99,7 +102,10 @@
                 },
                 "color": {
                   "field": "state",
-                  "type": "nominal"
+                  "type": "nominal",
+                  "scale": {
+                    "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]  // Custom colors to avoid green and red together
+                  }
                 }
               }
             }
@@ -143,7 +149,14 @@
                   "scale": { "range": [1000, 10000] },
                   "legend": null 
                 },
-                "color": { "field": "state", "type": "nominal", "legend": null },
+                "color": {
+                  "field": "state",
+                  "type": "nominal",
+                  "scale": {
+                    "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]  // Custom colors to avoid green and red together
+                  },
+                  "legend": null
+                },
                 "tooltip": [
                   { "field": "state", "type": "nominal" },
                   {
@@ -182,7 +195,7 @@
       "data": {
         "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
       },
-      "mark": { "type": "line", "color": "#fdbe85" },
+      "mark": { "type": "line", "color": "black" }, 
       "params": [
         {
           "name": "time_brush",
