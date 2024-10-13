@@ -249,6 +249,28 @@
                 "text": { "field": "label", "type": "nominal" },
                 "color": { "value": "black" }
               }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": 5,
+                "dy": -30,
+                "fontSize": 12,
+                "color": "green",
+                "fontWeight": "normal"
+              },
+              "transform": [
+                {
+                  "filter": "datum.state === 'W.P. Kuala Lumpur'"
+                }
+              ],
+              "encoding": {
+                "x": { "field": "state", "type": "nominal", "axis": null },
+                "y": { "field": "state", "type": "nominal", "axis": null },
+                "text": { "value": "Highest Average Income" }
+              }
             }
           ],
           "config": {
