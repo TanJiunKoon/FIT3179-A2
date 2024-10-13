@@ -101,7 +101,7 @@ function createSunburstChart(csvUrl, chartContainer) {
         .attr("dy", "0.35em")
         .style("font-size", "16px")
         .style("font-weight", "bold")
-        .text("Click to Return");
+        .text("Click here to return");
     
     function clicked(event, p) {
       parent.datum(p.parent || root);
