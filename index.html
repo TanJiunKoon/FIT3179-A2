@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
-      integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://d3-annotation.susielu.com/assets/d3-annotation.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malaysia Economics Visualised</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
+      integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8" defer></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="https://d3-annotation.susielu.com/assets/d3-annotation.min.js" defer></script>
+    <script src="js/sunburst_chart.js" defer></script>
+    <script src="js/connected_scatterplot.js" defer></script>
+    <script src="js/init.js" defer></script>
   </head>
-  
-  <body>
-    <div class="slideshow">
-      <div id="title" class="center slide mt-10">
-        <p class="text-7xl">Do you really know Malaysia Economics?</p>
-      </div>
 
-      <div class="slide">
-        <!-- Choropleth map --> 
+  <body>
+    <main class="slideshow">
+      <section id="title" class="center slide mt-10">
+        <p class="text-7xl">Do you really know Malaysia Economics?</p>
+      </section>
+
+      <section class="slide">
+        <!-- Choropleth map -->
         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading">
-              <img src="img/Address_gps_location_map_pin_icon.png" alt="Icon" class="small_icon" />
+              <img src="img/Address_gps_location_map_pin_icon.png" alt="Location pin icon" class="small_icon" />
               Which states in Malaysia have the highest and lowest unemployment rates?
             </p>
           </div>
@@ -35,13 +48,15 @@
 
         <div class="pure-g">
           <div class="pure-u-12-24">
-            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-              The East Malaysian state of Sabah experiences significantly higher unemployment compared to most regions in Peninsular Malaysia in 2022.              
+            <p class="text columns-1 pt-5 pr-5 slide-text">
+              The East Malaysian state of Sabah experiences significantly higher unemployment compared to most regions in Peninsular
+              Malaysia in 2022.
             </p>
           </div>
           <div class="pure-u-12-24 pl-10">
-            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              The <strong class="blue-text">unemployment rate</strong> value provides insight into the economic conditions and job market of each region in Malaysia.
+            <p class="text columns-1 pt-5 pr-10 slide-text">
+              The <strong class="blue-text">unemployment rate</strong> value provides insight into the economic conditions and job
+              market of each region in Malaysia.
             </p>
           </div>
         </div>
@@ -49,18 +64,18 @@
         <div class="pure-g">
           <div class="pure-u-24-24">
             <div class="center">
-              <div id="choropleth_map_spec"></div>  
+              <div id="choropleth_map_spec"></div>
             </div>
           </div>
         </div>
-      </div> 
-      
-      <div class="slide">
+      </section>
+
+      <section class="slide">
         <!-- Bump Chart -->
         <div class="pure-g">
           <div class="pure-u-24-24">
             <p class="subheading">
-              <img src="img/Ranking_icon.png" alt="Icon" class="small_icon" />
+              <img src="img/Ranking_icon.png" alt="Ranking icon" class="small_icon" />
               Which states in Malaysia have the highest poverty rates?
             </p>
           </div>
@@ -68,13 +83,14 @@
 
         <div class="pure-g">
           <div class="pure-u-12-24">
-            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
+            <p class="text columns-1 pt-5 pr-5 slide-text">
               This bump chart visualizes the ranking of states in Malaysia based on their poverty rates over time.
             </p>
           </div>
           <div class="pure-u-12-24 pl-10">
-            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              The data shows the <strong>absolute poverty rate</strong>, which is defined as the proportion of households with a monthly income below the Poverty Line.
+            <p class="text columns-1 pt-5 pr-10 slide-text">
+              The data shows the <strong>absolute poverty rate</strong>, which is defined as the proportion of households with a
+              monthly income below the Poverty Line.
             </p>
           </div>
         </div>
@@ -82,61 +98,69 @@
         <div class="pure-g">
           <div class="pure-u-24-24">
             <div class="center">
-              <div id="bump_chart"></div>  
+              <div id="bump_chart"></div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="slide">
-         <!-- Interactive Chart -->
-         <div class="pure-g">
+      <section class="slide">
+        <!-- Interactive Chart -->
+        <div class="pure-g">
           <div class="pure-u-24-24">
-            <p class="subheading"><img src="img/Paint_brush_icon.png" alt="Icon" class="small_icon" />Income Growth by State in Malaysia</p>
+            <p class="subheading">
+              <img src="img/Paint_brush_icon.png" alt="Paint brush icon" class="small_icon" />Income Growth by State in Malaysia
+            </p>
           </div>
         </div>
 
         <div class="pure-g">
           <div class="pure-u-12-24">
-            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-              These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key regions. <br><br>
-              The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific time periods by highlighting them in the upper graph.
+            <p class="text columns-1 pt-5 pr-5 slide-text">
+              These visualizations track the total income across various Malaysian states over time, with a detailed breakdown of key
+              regions. <br /><br />
+              The bottom line chart provides <strong class="fruit">brushing interaction</strong>, allowing users to explore specific
+              time periods by highlighting them in the upper graph.
             </p>
           </div>
           <div class="pure-u-12-24 pl-10">
-            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              The <strong> Total Income</strong> represents the sum of all household incomes across various states in Malaysia, with each colored layer representing a state's contribution. <br><br>
-              The <strong> Average Income</strong> is the gross monthly household income averaged across households in each state.
+            <p class="text columns-1 pt-5 pr-10 slide-text">
+              The <strong>Total Income</strong> represents the sum of all household incomes across various states in Malaysia, with each
+              colored layer representing a state's contribution. <br /><br />
+              The <strong>Average Income</strong> is the gross monthly household income averaged across households in each state.
             </p>
           </div>
         </div>
 
         <div class="pure-u-24-24">
           <div class="center">
-            <div id="brushing_interaction_3charts_spec"></div> <!-- This div is where the new Vega chart will render -->
+            <div id="brushing_interaction_3charts_spec"></div>
           </div>
         </div>
+      </section>
 
-      </div>
-
-      <div class="slide">
+      <section class="slide">
         <!-- Sunburst Chart -->
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <p class="subheading"><img src="img/Sunburst_chart_hierarchy_data_visualization_icon.png" alt="Icon" class="small_icon" />What are the production sectors that contribute the most to Malaysia's Gross Domestic Product (GDP)? </p>
+            <p class="subheading">
+              <img src="img/Sunburst_chart_hierarchy_data_visualization_icon.png" alt="Sunburst chart icon" class="small_icon" />
+              What are the production sectors that contribute the most to Malaysia's Gross Domestic Product (GDP)?
+            </p>
           </div>
         </div>
 
         <div class="pure-g">
           <div class="pure-u-12-24">
-            <p class="text columns-1 pt-5 pr-5" style="margin-bottom: 2em;">
-              This interactive sunburst chart represents Malaysia's Gross Domestic Product (GDP) breakdown by production sectors in 2023.  <br><br>
+            <p class="text columns-1 pt-5 pr-5 slide-text">
+              This interactive sunburst chart represents Malaysia's Gross Domestic Product (GDP) breakdown by production sectors in 2023.
+              <br /><br />
               You have the ability to <strong class="fruit">zoom in</strong> and explore each sector's subcategories in detail.
             </p>
           </div>
           <div class="pure-u-12-24 pl-10">
-            <p class="text columns-1 pt-5 pr-10" style="margin-bottom: 2em;">
-              <strong>Gross Domestic Product (GDP) </strong> represents the total value of goods and services produced within a specific year.
+            <p class="text columns-1 pt-5 pr-10 slide-text">
+              <strong>Gross Domestic Product (GDP)</strong> represents the total value of goods and services produced within a specific year.
             </p>
           </div>
         </div>
@@ -144,144 +168,97 @@
         <div class="pure-g">
           <div class="pure-u-24-24">
             <div class="center">
-              <div id="sunburst_chart"></div> <!-- This div is where the D3 sunburst will render -->
+              <div id="sunburst_chart"></div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="slide">
+      <section class="slide">
         <!-- Connected Scatterplot -->
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <p class="subheading"><img src="img/Line_chart_diagram_business_analytics_icon.png" alt="Icon" class="small_icon" />Did Foreign Direct Investment (FDI) have a correlation with Gross Domestic Product (GDP)?</p>
+            <p class="subheading">
+              <img src="img/Line_chart_diagram_business_analytics_icon.png" alt="Line chart icon" class="small_icon" />Did Foreign Direct
+              Investment (FDI) have a correlation with Gross Domestic Product (GDP)?
+            </p>
           </div>
         </div>
 
         <div class="pure-g">
           <div class="pure-u-12-24">
-              <p class="text columns-1 pr-5" style="margin-bottom: 0.1em;">
-                This animated connected scatterplot chart visualizes the relationship between Malaysia's Net Foreign Direct Investment flows and Gross Domestic Product.<br><br>
-                You have the ability to <strong class="fruit">replay animation</strong> again.
-              </p>
+            <p class="text columns-1 pr-5 slide-text--compact">
+              This animated connected scatterplot chart visualizes the relationship between Malaysia's Net Foreign Direct Investment flows and
+              Gross Domestic Product.<br /><br />
+              You have the ability to <strong class="fruit">replay animation</strong> again.
+            </p>
           </div>
           <div class="pure-u-12-24 pl-10">
-            <p class="text columns-1 pr-10" style="margin-bottom: 0.1em;">
-              <strong>Foreign Direct Investment (FDI) </strong> into Malaysia refers to investments made by non-residents that indicate long-term interests in the country's economy.<br><br>
-              The <strong> Net FDI Flows </strong> represented here are the difference between FDI inflows and outflows
+            <p class="text columns-1 pr-10 slide-text--compact">
+              <strong>Foreign Direct Investment (FDI)</strong> into Malaysia refers to investments made by non-residents that indicate long-term
+              interests in the country's economy.<br /><br />
+              The <strong>Net FDI Flows</strong> represented here are the difference between FDI inflows and outflows.
             </p>
           </div>
         </div>
 
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <div class="center" style="padding-top: 10px;">
-              <div id="connected_scatterplot_chart"></div> <!-- Scatterplot Chart goes here -->
+            <div class="center chart-container">
+              <div id="connected_scatterplot_chart"></div>
             </div>
           </div>
           <div class="pure-u-24-24">
             <div class="left">
-              <!-- Replay Button under the chart -->
-              <button id="replay-button" style="margin-top: 20px; padding: 5px 10px; font-size: 12px; background-color: #d3d3d3; border: 1px solid #888; color: black; cursor: pointer;">
-                Replay Animation
-              </button>
+              <button id="replay-button" type="button">Replay Animation</button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="slide">
+      <section class="slide">
         <!-- Radial Tree -->
         <div class="pure-g">
           <div class="pure-u-24-24">
-            <p class="subheading"><img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Icon" class="small_icon" />Hierarchy of Malaysia's Gross Domestic Product (GDP) by Production Sectors</p>
-            <p class="text columns-1" style="margin-bottom: 2em;">
-              This radial tree diagram illustrates the detailed hierarchy of Malaysia’s Gross Domestic Product (GDP) by various production sectors. 
+            <p class="subheading">
+              <img src="img/Ray_gleam_light_glimmer_streamer_icon.png" alt="Radial tree icon" class="small_icon" />Hierarchy of Malaysia's
+              Gross Domestic Product (GDP) by Production Sectors
+            </p>
+            <p class="text columns-1 slide-text">
+              This radial tree diagram illustrates the detailed hierarchy of Malaysia’s Gross Domestic Product (GDP) by various production
+              sectors.
             </p>
           </div>
-          
+
           <div class="pure-u-24-24">
             <div class="center">
-              <div id="radial_tree_spec"></div>  
+              <div id="radial_tree_spec"></div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="footer small-font-size">
+      <footer class="footer small-font-size">
         <p>
-          Tan Jiun Koon, my source code on <a href="https://github.com/TanJiunKoon/FIT3179-A2" target="_blank">GitHub</a>.  
-          13/10/2024.  <br> 
-          Source: <a href="https://data.gov.my/data-catalogue/lfs_state_sex" target="_blank">lfs_state_sexe</a>, Author: Government of Malaysia, Date: 09 Feb 2024<br> 
-          Source: <a href="https://data.gov.my/data-catalogue/hh_poverty_state" target="_blank">hh_poverty_state</a>, Author: Government of Malaysia, Date: 28 Jul 2023<br> 
-          Source: <a href="https://data.gov.my/data-catalogue/hh_income_state" target="_blank">hh_income_state</a>, Author: Government of Malaysia, Date: 28 Jul 2023<br> 
-          Source: <a href="https://data.gov.my/data-catalogue/fdi_flows" target="_blank">fdi_flows</a>, Author: Government of Malaysia, Date: 16 Aug 2024<br> 
-          Source: <a href="https://data.gov.my/data-catalogue/gdp_annual_nominal_supply_granular" target="_blank">gdp_annual_nominal_supply_granular</a>, Author: Government of Malaysia, Date: 17 May 2024<br> 
-          Source: <a href="https://data.gov.my/data-catalogue/gdp_gni_annual_real" target="_blank">gdp_gni_annual_real</a>, Author: Government of Malaysia, Date: 17 May 2024<br> 
+          Tan Jiun Koon, my source code on <a href="https://github.com/TanJiunKoon/FIT3179-A2" target="_blank" rel="noopener">GitHub</a>.
+          13/10/2024. <br />
+          Source: <a href="https://data.gov.my/data-catalogue/lfs_state_sex" target="_blank" rel="noopener">lfs_state_sexe</a>, Author:
+          Government of Malaysia, Date: 09 Feb 2024<br />
+          Source: <a href="https://data.gov.my/data-catalogue/hh_poverty_state" target="_blank" rel="noopener">hh_poverty_state</a>, Author:
+          Government of Malaysia, Date: 28 Jul 2023<br />
+          Source: <a href="https://data.gov.my/data-catalogue/hh_income_state" target="_blank" rel="noopener">hh_income_state</a>, Author:
+          Government of Malaysia, Date: 28 Jul 2023<br />
+          Source: <a href="https://data.gov.my/data-catalogue/fdi_flows" target="_blank" rel="noopener">fdi_flows</a>, Author: Government of
+          Malaysia, Date: 16 Aug 2024<br />
+          Source: <a href="https://data.gov.my/data-catalogue/gdp_annual_nominal_supply_granular" target="_blank" rel="noopener"
+            >gdp_annual_nominal_supply_granular</a
+          >, Author: Government of Malaysia, Date: 17 May 2024<br />
+          Source: <a href="https://data.gov.my/data-catalogue/gdp_gni_annual_real" target="_blank" rel="noopener">gdp_gni_annual_real</a>,
+          Author: Government of Malaysia, Date: 17 May 2024<br />
         </p>
-      </div>      
+      </footer>
+    </main>
 
-    </div>
-
-    
-
-    <div id="tooltip" style="
-    position: absolute;
-    visibility: hidden;
-    background-color: white;  /* White background like Vega-Lite */
-    color: black;             /* Black text color */
-    padding: 5px 10px;        /* Padding to match Vega-Lite's spacing */
-    border-radius: 3px;       /* Slightly rounded corners */
-    font-size: 13px;          /* Standard font size */
-    font-family: sans-serif;  /* Vega-Lite uses default sans-serif font */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    border: 1px solid rgba(0, 0, 0, 0.15); /* Light border */
-    pointer-events: none; /* So that tooltips don't interfere with mouse events */
-    transition: visibility 0.1s, opacity 0.1s ease-in-out; /* Smooth fade effect */
-    opacity: 0; /* For smooth appearing/disappearing */
-    "></div>
-
-    <!-- Scripts for Vega visualizations -->
-    <script type="text/javascript">
-      var spec = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/malaysia_choropleth_map.json";
-      vegaEmbed('#choropleth_map_spec', spec, { actions: {
-        export: true, // Enable export as image options
-        source: true, // View source JSON
-        compiled: false, // View compiled Vega spec
-        editor: true   // Open in Vega Editor
-      } }).then(function(result) {}).catch(console.error);
-
-      var spec2 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/radial_tree.js";
-      vegaEmbed('#radial_tree_spec', spec2, { actions: {
-        export: true, // Enable export as image options
-        source: true, // View source JSON
-        compiled: false, // View compiled Vega spec
-        editor: true   // Open in Vega Editor
-      } }).then(function(result) {}).catch(console.error);
-
-      var spec3 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/brushing_interaction_3charts.json";
-      vegaEmbed('#brushing_interaction_3charts_spec', spec3).then(function(result) {
-        // Access the Vega view instance as result.view
-      }).catch(console.error);
-
-      var spec4 = "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/js/bump_chart.json";
-      vegaEmbed('#bump_chart', spec4).then(function(result) {}).catch(console.error);
-      
-    </script>
-
-    <!-- External script for D3 Zoomable Sunburst Chart -->
-    <script src="js/sunburst_chart.js"></script>
-    
-    <!-- Call the function to create the sunburst chart -->
-    <script>
-      // Pass the URL of the CSV data and the container for the chart
-      createSunburstChart('data/zoomable_gdp_data.csv', '#sunburst_chart');
-    </script>
-
-    <!-- External script for the Connected Scatterplot -->
-    <script src="js/connected_scatterplot.js"></script>
-
-    
-
+    <div id="tooltip" class="tooltip"></div>
   </body>
 </html>

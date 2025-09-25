@@ -8,7 +8,7 @@
           "width": 728,
           "height": 400,
           "data": {
-            "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
+            "url": "data/income_dataset.json"
           },
           "transform": [
             {
@@ -154,7 +154,7 @@
           "height": 400,
           "title": "Average Income for years selected",
           "data": {
-            "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
+            "url": "data/income_dataset.json"
           },
           "transform": [
             {
@@ -284,7 +284,7 @@
       "width": 1228,
       "height": 100,
       "data": {
-        "url": "https://raw.githubusercontent.com/TanJiunKoon/FIT3179-A2/main/data/income_dataset.json"
+        "url": "data/income_dataset.json"
       },
       "mark": { "type": "line", "color": "black" },
       "params": [
